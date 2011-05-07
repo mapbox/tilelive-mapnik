@@ -1,0 +1,31 @@
+{
+    "name"          : "tilelive-mapnik",
+    "main"          : "./index",
+    "description"   : "mapnik backend for tilelive",
+    "url"           : "http://github.com/mapbox/tilelive-mapnik",
+    "keywords"      : ["map", "server", "mapnik", "tms"],
+    "licenses"      : [{
+        "type": "BSD"
+    }],
+    "repositories": [{
+        "type": "git",
+        "url": "http://github.com/mapbox/tilelive-mapnik.git" 
+    }],
+    "contributors": [
+        "Tom MacWright <tmcw>",
+        "Will White <willwhite>",
+        "Dane Springmeyer <springmeyer>",
+        "Young Hahn <yhahn>"
+    ],
+    "dependencies": {
+        "carto"       : "0.1.x",
+        "mapnik"      : "0.3.x",
+        "step"        : "0.0.x",
+        "underscore"  : "1.1.x",
+        "zlib"        : "1.0.x"
+    },
+    "engines": {
+        "node": ">= 0.2.6"
+    },
+    "version"       : "0.0.1"
+}
