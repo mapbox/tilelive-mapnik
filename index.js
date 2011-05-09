@@ -4,7 +4,6 @@ module.exports = {
     pool: function(datasource, options) {
         return {
             create: function(callback) {
-                console.log(datasource);
                 var resource = new Map(datasource, options);
                 resource.initialize(function(err) {
                     if (err) throw err;
