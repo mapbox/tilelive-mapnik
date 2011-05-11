@@ -1,10 +1,10 @@
 var Map = require('./lib/map');
 
 module.exports = {
-    pool: function(datasource, options) {
+    pool: function(datasource) {
         return {
             create: function(callback) {
-                var resource = new Map(datasource, options);
+                var resource = new Map(datasource);
                 resource.initialize(function(err) {
                     if (err) throw err;
                     callback(resource);
