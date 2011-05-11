@@ -1,5 +1,6 @@
 {
     "name"          : "tilelive-mapnik",
+    "version"       : "0.0.1",
     "main"          : "./index",
     "description"   : "mapnik backend for tilelive",
     "url"           : "http://github.com/mapbox/tilelive-mapnik",
@@ -25,8 +26,14 @@
         "underscore"  : "1.1.x",
         "zlib"        : "1.0.x"
     },
+    "devDependencies": {
+        "expresso": "0.7.x"
+    },
     "engines": {
         "node": ">= 0.4.0"
     },
-    "version"       : "0.0.1"
+    "scripts": {
+        "pretest": "npm install --dev",
+        "test": "./node_modules/expresso/bin/expresso"
+    }
 }

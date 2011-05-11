@@ -1,6 +1,9 @@
-var Map = require('./lib/map');
+var Map = require('./lib/map'),
+    Format = require('./lib/format');
 
 module.exports = {
+    Map: Map,
+    Format: Format,
     pool: function(datasource) {
         return {
             create: function(callback) {
