@@ -2,6 +2,10 @@ var mapnik = require('../index'),
     assert = require('assert'),
     fs = require('fs');
 
+// Recreate output directory to remove previous tests.
+var output = __dirname + '/output';
+try { fs.mkdirSync(output, 0755); } catch(err) {}
+
 var OPTIONS = {
     bbox: [-20037508.34, -20037508.34, 20037508.34, 20037508.34],
     format: 'png'
@@ -14,7 +18,7 @@ var OPTIONSGRID = {
     fields: ['NAME']
 };
 
-var CARTOURL = 'http://tilemill-testing.s3.amazonaws.com/tilelive_test/world.mml';
+var CARTOURL = 'http://mapbox.github.com/tilelive-mapnik/test/world.mml';
 var CARTOFILE = __dirname + '/data/world.mml';
 var CARTOOBJ = JSON.parse(fs.readFileSync(CARTOFILE, 'utf8'));
 var MAPNIKFILE = __dirname + '/data/stylesheet.xml';
@@ -27,7 +31,8 @@ exports['cartourl'] = function() {
         mapnik.serve(map, OPTIONS, function(err, data) {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
-            assert.ok(data[0].length > 18000 && data[0].length <  19000, 'The rendered data is of appropriate size.');
+            fs.writeFileSync(output + '/cartourl.png', data[0], 'binary');
+            assert.ok(data[0].length > 19000 && data[0].length <  21000, 'The rendered data is of appropriate size.');
         });
     });
 };
@@ -39,7 +44,8 @@ exports['cartolocal'] = function() {
         mapnik.serve(map, OPTIONS, function(err, data) {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
-            assert.ok(data[0].length > 18000 && data[0].length <  19000, 'The rendered data is of appropriate size.');
+            fs.writeFileSync(output + '/cartolocal.png', data[0], 'binary');
+            assert.ok(data[0].length > 19000 && data[0].length <  21000, 'The rendered data is of appropriate size.');
         });
     });
 };
@@ -51,7 +57,8 @@ exports['cartojson'] = function() {
         mapnik.serve(map, OPTIONS, function(err, data) {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
-            assert.ok(data[0].length > 18000 && data[0].length <  19000, 'The rendered data is of appropriate size.');
+            fs.writeFileSync(output + '/cartojson.png', data[0], 'binary');
+            assert.ok(data[0].length > 19000 && data[0].length <  21000, 'The rendered data is of appropriate size.');
         });
     });
 };
@@ -63,6 +70,7 @@ exports['xmllocal'] = function() {
         mapnik.serve(map, OPTIONS, function(err, data) {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
+            fs.writeFileSync(output + '/xmllocal.png', data[0], 'binary');
             assert.ok(data[0].length > 27000 && data[0].length <  28000, 'The rendered data is of appropriate size.');
         });
     });
@@ -75,6 +83,7 @@ exports['xmlstring'] = function() {
         mapnik.serve(map, OPTIONS, function(err, data) {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
+            fs.writeFileSync(output + '/xmlstring.png', data[0], 'binary');
             assert.ok(data[0].length > 27000 && data[0].length <  28000, 'The rendered data is of appropriate size.');
         });
     });
