@@ -13,10 +13,9 @@ formats:
 
 ### Installation
 
-    npm install tilelive
-    npm install tilelive-mapnik
+    npm install tilelive tilelive-mapnik
 
-Though tilelive is not a dependency of `tilelive-mapnik` you will want to
+Though `tilelive` is not a dependency of `tilelive-mapnik` you will want to
 install it to actually make use of `tilelive-mapnik` through a reasonable
 API.
 
