@@ -103,4 +103,20 @@ exports['grid'] = function() {
     });
 };
 
+exports['s64'] = function() {
+    // Generate a string including all ASCII characters. Concatenated it
+    // to itself to test that character replacement applies to multiple
+    // occurrences.
+    var str = '';
+    for (var i = 0; i < 128; i++) {
+        str += String.fromCharCode(i);
+    }
+    str = str + str;
+
+    var s64 = require('../lib/safe64');
+    var encoded = s64.encode(str);
+    assert.ok(/^[a-zA-Z0-9-_=]+$/.test(encoded), 'Safe64 encoded string has valid characters.');
+    assert.ok(s64.decode(encoded) === str, 'Decoded string matches original.');
+};
+
 // @TODO: test PDF, JPEG
