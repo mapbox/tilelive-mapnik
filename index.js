@@ -11,8 +11,7 @@ module.exports = {
             create: function(callback) {
                 var resource = new Map(datasource);
                 resource.initialize(function(err) {
-                    if (err) throw err;
-                    callback(resource);
+                    callback(err, resource);
                 });
             },
             destroy: function(resource) {
