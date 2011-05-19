@@ -1,9 +1,11 @@
 var Map = require('./lib/map'),
-    Format = require('./lib/format');
+    Format = require('./lib/format'),
+    safe64 = require('./lib/safe64');
 
 module.exports = {
     Map: Map,
     Format: Format,
+    safe64: safe64,
     pool: function(datasource) {
         return {
             create: function(callback) {
