@@ -2,7 +2,7 @@ test:
 	expresso test/test.js
 
 clean:
-	rm -r test/data/29578fe9eb8e576fb55121faa390f3a7*
+	rm -r test/data/world
 	rm -r test/output
 	rm test/data/.*.xml
 
