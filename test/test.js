@@ -32,7 +32,7 @@ exports['cartourl'] = function() {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
             fs.writeFileSync(output + '/cartourl.png', data[0], 'binary');
-            assert.ok(data[0].length > 19000 && data[0].length <  21000, 'The rendered data is of appropriate size.');
+            assert.ok(data[0].length > 16000 && data[0].length <  22000, 'The rendered data is of appropriate size.');
         });
     });
 };
@@ -45,7 +45,7 @@ exports['cartolocal'] = function() {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
             fs.writeFileSync(output + '/cartolocal.png', data[0], 'binary');
-            assert.ok(data[0].length > 19000 && data[0].length <  21000, 'The rendered data is of appropriate size.');
+            assert.ok(data[0].length > 16000 && data[0].length <  22000, 'The rendered data is of appropriate size.');
         });
     });
 };
@@ -58,7 +58,7 @@ exports['cartojson'] = function() {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
             fs.writeFileSync(output + '/cartojson.png', data[0], 'binary');
-            assert.ok(data[0].length > 19000 && data[0].length <  21000, 'The rendered data is of appropriate size.');
+            assert.ok(data[0].length > 16000 && data[0].length <  22000, 'The rendered data is of appropriate size.');
         });
     });
 };
@@ -71,7 +71,7 @@ exports['xmllocal'] = function() {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
             fs.writeFileSync(output + '/xmllocal.png', data[0], 'binary');
-            assert.ok(data[0].length > 27000 && data[0].length <  28000, 'The rendered data is of appropriate size.');
+            assert.ok(data[0].length > 24000 && data[0].length <  30000, 'The rendered data is of appropriate size.');
         });
     });
 };
@@ -84,7 +84,7 @@ exports['xmlstring'] = function() {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
             fs.writeFileSync(output + '/xmlstring.png', data[0], 'binary');
-            assert.ok(data[0].length > 27000 && data[0].length <  28000, 'The rendered data is of appropriate size.');
+            assert.ok(data[0].length > 24000 && data[0].length <  30000, 'The rendered data is of appropriate size.');
         });
     });
 };
