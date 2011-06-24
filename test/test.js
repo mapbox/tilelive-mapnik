@@ -97,7 +97,7 @@ exports['grid'] = function() {
             assert.isNull(err, 'The rendering should not return an error.');
             assert.ok(data, 'The rendering returned data.');
             assert.ok(data[0].grid.length === 64, 'The grid has 64 rows.');
-            assert.ok(data[0].keys.length === 145, 'The grid includes 145 keys.');
+            assert.ok(data[0].keys.length === 131, 'The grid includes 145 keys.');
             assert.ok(data[0].data.ZW.NAME === 'Zimbabwe', 'The grid includes data');
         });
     });

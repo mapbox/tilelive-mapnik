@@ -1,6 +1,6 @@
 {
     "name"          : "tilelive-mapnik",
-    "version"       : "0.0.5",
+    "version"       : "0.0.6",
     "main"          : "./index",
     "description"   : "Mapnik backend for tilelive.",
     "url"           : "http://github.com/mapbox/tilelive-mapnik",
@@ -21,10 +21,10 @@
     "dependencies": {
         "carto"       : "0.1.x",
         "get"         : "0.1.x",
-        "mapnik"      : "0.3.x",
         "step"        : "0.0.x",
         "underscore"  : "1.1.x",
-        "zlib"        : "1.0.x"
+        "zlib"        : "1.0.x",
+        "mapnik"      : "https://github.com/mapnik/node-mapnik/tarball/0.4.0"
     },
     "devDependencies": {
         "expresso": "0.7.x"
