@@ -3,7 +3,7 @@
     "Stylesheet": [
         {
             "id": "style.mss",
-            "data": "#world {line-color: #000;}"
+            "data": "#world {polygon-fill: #ccc;line-color: #000;line-width:.5;}"
         }
     ],
     "Layer": [
