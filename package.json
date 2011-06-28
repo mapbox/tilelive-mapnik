@@ -24,7 +24,7 @@
         "step"        : "0.0.x",
         "underscore"  : "1.1.x",
         "zlib"        : "1.0.x",
-        "mapnik"      : "https://github.com/mapnik/node-mapnik/tarball/0.4.0"
+        "mapnik"      : "0.4.x"
     },
     "devDependencies": {
         "expresso": "0.7.x"
