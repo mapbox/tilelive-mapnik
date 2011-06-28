@@ -1,5 +1,5 @@
 test:
-	expresso test/test.js
+	@ expresso test/test.js
 
 clean:
 	rm -r test/data/world
