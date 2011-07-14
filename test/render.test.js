@@ -70,6 +70,28 @@ exports['getTile()'] = function(beforeExit) {
     });
 
     beforeExit(function() {
-        assert.ok(completion);
+        assert.deepEqual(completion, {
+            tile_2_0_2: true,
+            tile_2_0_1: true,
+            tile_2_0_0: true,
+            tile_1_1_0: true,
+            tile_1_1_1: true,
+            tile_1_0_1: true,
+            tile_0_0_0: true,
+            tile_1_0_0: true,
+            tile_2_3_2: true,
+            tile_2_3_0: true,
+            tile_2_2_2: true,
+            tile_2_2_3: true,
+            tile_2_2_1: true,
+            tile_2_2_0: true,
+            tile_2_1_2: true,
+            tile_2_1_3: true,
+            tile_2_1_1: true,
+            tile_2_1_0: true,
+            tile_2_0_3: true,
+            tile_2_3_1: true,
+            tile_2_3_3: true
+        });
     });
 };
