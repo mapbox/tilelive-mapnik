@@ -58,12 +58,15 @@ exports['getTile()'] = function(beforeExit) {
             [2, 3, 2],
             [2, 3, 3]
         ].forEach(function(coords) {
-            source.getTile(coords[0], coords[1], coords[2], function(err, tile) {
+            source.getTile(coords[0], coords[1], coords[2], function(err, tile, headers) {
                 if (err) throw err;
                 var key = coords[0] + '_' + coords[1] + '_' + coords[2];
                 assert.imageEqualsFile(tile, 'test/fixture/tiles/' + key + '.png', function(err, similarity) {
                     completion['tile_' + key] = true;
                     if (err) throw err;
+                    assert.deepEqual(headers, {
+                        "Content-Type": "image/png"
+                    });
                 });
             });
         });
