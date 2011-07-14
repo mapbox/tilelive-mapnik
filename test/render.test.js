@@ -35,7 +35,7 @@ exports['getTile()'] = function(beforeExit) {
     var completion = {};
     new mapnik('mapnik://./test/data/world.mml', function(err, source) {
         if (err) throw err;
-        
+
         [   [0, 0, 0],
             [1, 0, 0],
             [1, 0, 1],
@@ -61,7 +61,7 @@ exports['getTile()'] = function(beforeExit) {
             source.getTile(coords[0], coords[1], coords[2], function(err, tile) {
                 if (err) throw err;
                 var key = coords[0] + '_' + coords[1] + '_' + coords[2];
-                assert.imageEqualsFile(tile, 'test/fixture/' + key + '.png', function(err, similarity) {
+                assert.imageEqualsFile(tile, 'test/fixture/tiles/' + key + '.png', function(err, similarity) {
                     completion['tile_' + key] = true;
                     if (err) throw err;
                 });
