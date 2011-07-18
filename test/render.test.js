@@ -98,3 +98,17 @@ exports['getTile()'] = function(beforeExit) {
         });
     });
 };
+
+
+exports['getTile() with invalid style'] = function(beforeExit) {
+    var completion = false;
+    new mapnik('mapnik://./test/data/invalid_style.mml', function(err, source) {
+        completion = true;
+        assert.ok(err);
+        assert.equal(err.message, "Missing closing `}` at style.mss:1:25");
+    });
+
+    beforeExit(function() {
+        assert.ok(completion);
+    })
+}
