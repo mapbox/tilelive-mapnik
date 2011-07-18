@@ -69,7 +69,7 @@ exports['getTile()'] = function(beforeExit) {
             source.getTile(coords[0], coords[1], coords[2], function(err, tile, headers) {
                 if (err) throw err;
                 var key = coords[0] + '_' + coords[1] + '_' + coords[2];
-                assert.imageEqualsFile(tile, 'test/fixture/tiles/' + key + '.png', function(err, similarity) {
+                assert.imageEqualsFile(tile, 'test/fixture/tiles/transparent_' + key + '.png', function(err, similarity) {
                     completion['tile_' + key] = true;
                     if (err) throw err;
                     assert.deepEqual(headers, {
@@ -101,7 +101,35 @@ exports['getTile() with JSON mml file'] = function(beforeExit) {
             source.getTile(coords[0], coords[1], coords[2], function(err, tile, headers) {
                 if (err) throw err;
                 var key = coords[0] + '_' + coords[1] + '_' + coords[2];
-                assert.imageEqualsFile(tile, 'test/fixture/tiles/' + key + '.png', function(err, similarity) {
+                assert.imageEqualsFile(tile, 'test/fixture/tiles/transparent_' + key + '.png', function(err, similarity) {
+                    completion['tile_' + key] = true;
+                    if (err) throw err;
+                    assert.deepEqual(headers, {
+                        "Content-Type": "image/png"
+                    });
+                });
+            });
+        });
+    });
+
+    beforeExit(function() {
+        assert.deepEqual(completion, tileCoordsCompletion);
+    });
+};
+
+
+exports['getTile() with URL mml file'] = function(beforeExit) {
+    var completion = {};
+
+    new mapnik('mapnik://mapbox.github.com/tilelive-mapnik/test/world.mml', function(err, source) {
+        // console.warn
+        if (err) throw err;
+
+        tileCoords.forEach(function(coords) {
+            source.getTile(coords[0], coords[1], coords[2], function(err, tile, headers) {
+                if (err) throw err;
+                var key = coords[0] + '_' + coords[1] + '_' + coords[2];
+                assert.imageEqualsFile(tile, 'test/fixture/tiles/gray_' + key + '.png', function(err, similarity) {
                     completion['tile_' + key] = true;
                     if (err) throw err;
                     assert.deepEqual(headers, {
