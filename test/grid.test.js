@@ -68,3 +68,37 @@ exports['getGrid()'] = function(beforeExit) {
         });
     });
 };
+
+exports['getGrid() with invalid layer'] = function(beforeExit) {
+    var completed = false;
+    new mapnik('mapnik://./test/data/invalid_interactivity_1.mml', function(err, source) {
+        if (err) throw err;
+
+        source.getGrid(0, 0, 0, function(err, info, headers) {
+            completed = true;
+            assert.ok(err);
+            assert.equal(err.message, "Layer name 'blah' not found");
+        });
+    });
+
+    beforeExit(function() {
+        assert.ok(completed);
+    });
+};
+
+exports['getGrid() with invalid key'] = function(beforeExit) {
+    var completed = false;
+    new mapnik('mapnik://./test/data/invalid_interactivity_2.mml', function(err, source) {
+        if (err) throw err;
+
+        source.getGrid(0, 0, 0, function(err, info, headers) {
+            completed = true;
+            assert.ok(err);
+            assert.equal(err.message, "Shape Plugin: error no attribute by the name of 'does_not_exist', available attributes are: 'FIPS' 'ISO2' 'ISO3' 'UN' 'NAME' 'AREA' 'POP2005' 'REGION' 'SUBREGION' 'LON' 'LAT'");
+        });
+    });
+
+    beforeExit(function() {
+        assert.ok(completed);
+    });
+};
