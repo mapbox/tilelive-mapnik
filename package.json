@@ -19,7 +19,7 @@
         "Young Hahn <yhahn>"
     ],
     "dependencies": {
-        "carto"       : "0.1.x",
+        "carto"       : "~ 0.1.15",
         "get"         : "0.1.x",
         "step"        : "0.0.x",
         "underscore"  : "1.1.x",
