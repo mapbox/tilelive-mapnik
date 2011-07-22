@@ -35,7 +35,7 @@
         "node": "0.4.x"
     },
     "scripts": {
-        "pretest": "npm install --dev",
-        "test": "expresso"
+        "pretest": "which expresso || npm install --dev",
+        "test": "which expresso | sh"
     }
 }
