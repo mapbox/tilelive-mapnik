@@ -1,11 +1,11 @@
 {
-  "_center": {
+  "center": {
     "lat": 29.53522956294847,
     "lon": 1.054687500000007,
     "zoom": 2
   },
-  "_format": "png",
-  "_interactivity": {
+  "format": "png",
+  "interactivity": {
     "layer": "blah",
     "key_name": "ISO2",
     "template_teaser": "[NAME]",
