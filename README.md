@@ -1,41 +1,60 @@
 # tilelive-mapnik
 
-Renderer backend for [tilelive.js][1] that uses [node-mapnik][2] and [carto][3]
-to render tiles. Can be used to render tiles from the following datasource
-formats:
-
-    carto MML object    { "srs": ... }
-    carto MML file      /path/to/map.mml
-    carto MML URL       http://example.com/map.mml
-    mapnik XML string   <?xml version="1.0" ...
-    mapnik XML file     /path/to/map.xml
+Renderer backend for [tilelive.js](http://github.com/mapbox/tilelive.js) that
+uses [node-mapnik](http://github.com/mapnik/node-mapnik) to render tiles and
+grids from a Mapnik XML file. `tilelive-mapnik` implements the
+[Tilesource API](https://github.com/mapbox/tilelive.js/blob/master/API.md).
 
 
-### Installation
+## Installation
 
-    npm install tilelive tilelive-mapnik
+    npm install tilelive-mapnik
 
 Though `tilelive` is not a dependency of `tilelive-mapnik` you will want to
 install it to actually make use of `tilelive-mapnik` through a reasonable
 API.
 
 
-### Usage
+## Usage
 
-    var tilelive = new Server(require('tilelive-mapnik')),
-    tilelive.serve({
-        datasource: '/my/map/file.mml',
-        x: 0,
-        y: 0,
-        z: 0,
-        format: 'png'
-    }, function(err, data) {
-        if (!err) throw Err
-        // data[0]: PNG image
-        // data[1]: HTTP headers object appropriate for PNG format
+```javascript
+tilelive.load('mapnik:///path/to/file.xml', function(err, source) {
+    if (err) throw err;
+
+    // Interface is in XYZ/Google coordinates.
+    // Use `y = (1 << z) - 1 - y` to flip TMS coordinates.
+    source.getTile(0, 0, 0, function(err, tile, headers) {
+        // `err` is an error object when generation failed, otherwise null.
+        // `tile` contains the compressed image file as a Buffer
+        // `headers` is a hash with HTTP headers for the image.
     });
 
+    // The `.getGrid` is implemented accordingly.
+});
+```
 
-[1]: https://github.com/mapbox/tilelive.js
-[2]: https://github.com/mapnik/node-mapnik
-[3]: https://github.com/mapbox/carto
+Note that grid generation will only work when there's a `.mml` file with the
+same basename as the XML file in that directory that contains information
+about how interactivity should be rendered.
+
+Alternatively you may pass data to `tilelive-mapnik` directly using an XML
+string and MML object.
+
+```javascript
+var uri = {
+    protocol: 'mapnik:',
+    slashes: true,
+    xml: '<?xml version="1.0" encoding="utf-8"?>\n<Map srs="+proj=merc ... ',
+    mml: {
+        interactivity: {
+            layer: 'world',
+            fields: ['NAME']
+        },
+        format: 'png'
+    }
+};
+tilelive.load(uri, function(err, source) {
+    // ...
+});
+```
+

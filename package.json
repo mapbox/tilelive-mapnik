@@ -1,8 +1,8 @@
 {
     "name"          : "tilelive-mapnik",
-    "version"       : "0.0.6",
-    "main"          : "./index",
-    "description"   : "Mapnik backend for tilelive.",
+    "version"       : "0.1.0",
+    "main"          : "./lib/mapnik.js",
+    "description"   : "Mapnik backend for tilelive",
     "url"           : "http://github.com/mapbox/tilelive-mapnik",
     "keywords"      : ["map", "server", "mapnik", "tms"],
     "licenses"      : [{
@@ -10,7 +10,7 @@
     }],
     "repositories": [{
         "type": "git",
-        "url": "http://github.com/mapbox/tilelive-mapnik.git" 
+        "url": "http://github.com/mapbox/tilelive-mapnik.git"
     }],
     "contributors": [
         "Tom MacWright <tmcw>",
@@ -19,12 +19,11 @@
         "Young Hahn <yhahn>"
     ],
     "dependencies": {
-        "carto"       : "~ 0.1.15",
-        "get"         : "0.1.x",
         "step"        : "0.0.x",
         "underscore"  : "1.1.x",
-        "zlib"        : "1.0.x",
-        "mapnik"      : "0.4.x"
+        "generic-pool": "1.0.x",
+        "mapnik"      : "0.4.x",
+        "sphericalmercator": "1.0.0"
     },
     "devDependencies": {
         "expresso": "0.7.x"
@@ -33,7 +32,7 @@
         "node": "0.4.x"
     },
     "scripts": {
-        "pretest": "npm install --dev",
-        "test": "./node_modules/expresso/bin/expresso"
+        "pretest": "which expresso || npm install --dev",
+        "test": "which expresso | sh"
     }
 }

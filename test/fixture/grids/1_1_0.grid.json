@@ -1,0 +1,473 @@
+{
+    "grid": [
+        "                                                                ",
+        "                                                                ",
+        "                                                                ",
+        "                                                                ",
+        "                                                                ",
+        "                                                                ",
+        "                                                                ",
+        "                                                                ",
+        "                                                                ",
+        "                                                                ",
+        "                     !                                          ",
+        "                    ! !                                         ",
+        "                  ! !! !        !!!                             ",
+        "       #        !!!!!!!          !!                             ",
+        "      ###### #   !!!!!          !!!!                            ",
+        "    ######                 !    !!!!                            ",
+        "    ####                         !!!!!                          ",
+        "    ####                            !!                          ",
+        "     ## #                          !  !                         ",
+        "     ## #                    !      !!!                         ",
+        "      #  #              !         ! !!!!             !          ",
+        "                     !!!         !!!!!!!!        !!   !         ",
+        "                     !!      !  !!!!!!!!!       !!!!!           ",
+        "                    !!      ! !!!!!!!!!!         !   !          ",
+        "                   !!         !!!!!!!!!!!   !     !             ",
+        "                   !!    !!!!!!!!!!!!!!!!!! !!!    !            ",
+        "                   !     ! !!!!!!!!!!!!!!!!!!!!   !!!!          ",
+        "                   !!   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!          ",
+        "        $$$$        !!  !! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!       ",
+        "      $$$$$!!    !   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+        "     $$%%&!!!!  ! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+        "     $%%%&&!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+        "     %%%%&&!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+        "    $%%% &&!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+        "   $$%%%&&&!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+        "  $$%%% &&&!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+        "  $$$%% &&!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!  ",
+        "  $$%%%'&&!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!    ",
+        "  $$%%% ((!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   !  !!     ",
+        "   )%%% **!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!      !!      ",
+        "   ))%  ++,!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!      !!! !    ",
+        "-  ..////+,!!!!!!!!!!!!00!!!!!!!!!!!!!!!!!!!!!!!!!!     !!      ",
+        "- 1..////,,!!!!!!!!!!!000000!!!!!!!!!!!!!!!!2!!!!!!     !      3",
+        "-41..5///6666!!!!!000!0000000!!!!!!!7!!!!!!22!!!!!!!   !        ",
+        "888...99666666!!!00000000000000777777777772222!!!! !            ",
+        "88::;<==>>6666!!!!000000000000027777777777722222!! !  !         ",
+        "888;;??@@>> 6!!!! 00AA0000000022277777777222222!! B !           ",
+        "CC88;;?@@DD    !!!00AAAA0000022222777777222222E!  BB            ",
+        "C  ; ;;FGHHHHHHHIJ KKKAAAAAL22222222222222222EE   B             ",
+        "C  ; ;;GGGHHHHHHMM KKKKAANN22222222222222222 O   BB             ",
+        "PPPQ R  GGHHHHHSSMMMMMKKTTUU2222222222222222 OOB BB             ",
+        "PPPQ         VVSSMMMMMTTTUUWW22222222222222  OBBB               ",
+        "PPPQXX XXX YZ[[SSSMMMMMTUUUWW222222222222222  B                 ",
+        "PPPPXXXXXYYYY[[[[]MMMMUUUUUWW^^222W222222222  B                 ",
+        "PPPPXXXXXYYYY[[[[[_M`MUUUUWWWW^^WWW22222222  B    B             ",
+        "PPPPXXXXXYYYY[[[[[aaa   UUWWWWWWbWc2222222ddB                   ",
+        "ePPfffgXXhhhhh[[[[[[``   WWWWWWWbWccijj22  d                    ",
+        "eeffffggghhhhh [[[k[`     WWWWW  ccllj 2   m               n    ",
+        "eeffffggghhhhhokkkk`      WWWW    clllj    m        p           ",
+        "qfrrrrgghhhhhhskkk         WW    W lltj    mm                   ",
+        "qurrrrgghhhhhssvvvv       WWW    W l jj    mm              ww   ",
+        "xrrrryzzzhhhhsssvv        W  {   W l        mm     |||      w   ",
+        "} rryzzzzzhhhsssvv        ~        l    m            |     ",
+        "    yvv         ~                             "
+    ],
+    "keys": [
+        "",
+        "245",
+        "238",
+        "154",
+        "189",
+        "60",
+        "142",
+        "53",
+        "45",
+        "101",
+        "103",
+        "102",
+        "205",
+        "72",
+        "163",
+        "98",
+        "153",
+        "30",
+        "207",
+        "129",
+        "58",
+        "206",
+        "110",
+        "65",
+        "105",
+        "191",
+        "86",
+        "182",
+        "81",
+        "170",
+        "80",
+        "236",
+        "210",
+        "89",
+        "186",
+        "22",
+        "94",
+        "4",
+        "74",
+        "200",
+        "5",
+        "3",
+        "202",
+        "93",
+        "84",
+        "194",
+        "96",
+        "2",
+        "199",
+        "117",
+        "88",
+        "31",
+        "162",
+        "190",
+        "83",
+        "107",
+        "50",
+        "139",
+        "175",
+        "97",
+        "155",
+        "10",
+        "118",
+        "226",
+        "14",
+        "18",
+        "244",
+        "113",
+        "126",
+        "36",
+        "188",
+        "99",
+        "214",
+        "220",
+        "193",
+        "172",
+        "150",
+        "54",
+        "131",
+        "208",
+        "152",
+        "56",
+        "25",
+        "19",
+        "185",
+        "230",
+        "197",
+        "35",
+        "40",
+        "26",
+        "63",
+        "69",
+        "119",
+        "223",
+        "121",
+        "229",
+        "67",
+        "27",
+        "28",
+        "204",
+        "92"
+    ],
+    "data": {
+        "2": {
+            "NAME": "Algeria"
+        },
+        "3": {
+            "NAME": "Azerbaijan"
+        },
+        "4": {
+            "NAME": "Albania"
+        },
+        "5": {
+            "NAME": "Armenia"
+        },
+        "10": {
+            "NAME": "Bahrain"
+        },
+        "14": {
+            "NAME": "Bangladesh"
+        },
+        "18": {
+            "NAME": "Burma"
+        },
+        "19": {
+            "NAME": "Benin"
+        },
+        "22": {
+            "NAME": "Bulgaria"
+        },
+        "25": {
+            "NAME": "Cambodia"
+        },
+        "26": {
+            "NAME": "Sri Lanka"
+        },
+        "27": {
+            "NAME": "Congo"
+        },
+        "28": {
+            "NAME": "Democratic Republic of the Congo"
+        },
+        "30": {
+            "NAME": "China"
+        },
+        "31": {
+            "NAME": "Afghanistan"
+        },
+        "35": {
+            "NAME": "Cameroon"
+        },
+        "36": {
+            "NAME": "Chad"
+        },
+        "40": {
+            "NAME": "Central African Republic"
+        },
+        "45": {
+            "NAME": "Denmark"
+        },
+        "50": {
+            "NAME": "Egypt"
+        },
+        "53": {
+            "NAME": "Estonia"
+        },
+        "54": {
+            "NAME": "Eritrea"
+        },
+        "56": {
+            "NAME": "Ethiopia"
+        },
+        "58": {
+            "NAME": "Czech Republic"
+        },
+        "60": {
+            "NAME": "Finland"
+        },
+        "63": {
+            "NAME": "Micronesia, Federated States of"
+        },
+        "65": {
+            "NAME": "France"
+        },
+        "67": {
+            "NAME": "Gabon"
+        },
+        "69": {
+            "NAME": "Ghana"
+        },
+        "72": {
+            "NAME": "Germany"
+        },
+        "74": {
+            "NAME": "Greece"
+        },
+        "80": {
+            "NAME": "Croatia"
+        },
+        "81": {
+            "NAME": "Hungary"
+        },
+        "83": {
+            "NAME": "India"
+        },
+        "84": {
+            "NAME": "Iran (Islamic Republic of)"
+        },
+        "86": {
+            "NAME": "Italy"
+        },
+        "88": {
+            "NAME": "Iraq"
+        },
+        "89": {
+            "NAME": "Japan"
+        },
+        "92": {
+            "NAME": "Kenya"
+        },
+        "93": {
+            "NAME": "Kyrgyzstan"
+        },
+        "94": {
+            "NAME": "Korea, Democratic People's Republic of"
+        },
+        "96": {
+            "NAME": "Korea, Republic of"
+        },
+        "97": {
+            "NAME": "Kuwait"
+        },
+        "98": {
+            "NAME": "Kazakhstan"
+        },
+        "99": {
+            "NAME": "Lao People's Democratic Republic"
+        },
+        "101": {
+            "NAME": "Latvia"
+        },
+        "102": {
+            "NAME": "Belarus"
+        },
+        "103": {
+            "NAME": "Lithuania"
+        },
+        "105": {
+            "NAME": "Slovakia"
+        },
+        "107": {
+            "NAME": "Libyan Arab Jamahiriya"
+        },
+        "110": {
+            "NAME": "Mongolia"
+        },
+        "113": {
+            "NAME": "Mali"
+        },
+        "117": {
+            "NAME": "Malta"
+        },
+        "118": {
+            "NAME": "Oman"
+        },
+        "119": {
+            "NAME": "Maldives"
+        },
+        "121": {
+            "NAME": "Malaysia"
+        },
+        "126": {
+            "NAME": "Niger"
+        },
+        "129": {
+            "NAME": "Belgium"
+        },
+        "131": {
+            "NAME": "Northern Mariana Islands"
+        },
+        "139": {
+            "NAME": "Palestine"
+        },
+        "142": {
+            "NAME": "�land Islands"
+        },
+        "150": {
+            "NAME": "United States Minor Outlying Islands"
+        },
+        "152": {
+            "NAME": "Nigeria"
+        },
+        "153": {
+            "NAME": "Netherlands"
+        },
+        "154": {
+            "NAME": "Norway"
+        },
+        "155": {
+            "NAME": "Nepal"
+        },
+        "162": {
+            "NAME": "Pakistan"
+        },
+        "163": {
+            "NAME": "Poland"
+        },
+        "170": {
+            "NAME": "Romania"
+        },
+        "172": {
+            "NAME": "Philippines"
+        },
+        "175": {
+            "NAME": "Saudi Arabia"
+        },
+        "182": {
+            "NAME": "Slovenia"
+        },
+        "185": {
+            "NAME": "Somalia"
+        },
+        "186": {
+            "NAME": "Spain"
+        },
+        "188": {
+            "NAME": "Sudan"
+        },
+        "189": {
+            "NAME": "Sweden"
+        },
+        "190": {
+            "NAME": "Syrian Arab Republic"
+        },
+        "191": {
+            "NAME": "Switzerland"
+        },
+        "193": {
+            "NAME": "Thailand"
+        },
+        "194": {
+            "NAME": "Tajikistan"
+        },
+        "197": {
+            "NAME": "Togo"
+        },
+        "199": {
+            "NAME": "Tunisia"
+        },
+        "200": {
+            "NAME": "Turkey"
+        },
+        "202": {
+            "NAME": "Turkmenistan"
+        },
+        "204": {
+            "NAME": "Uganda"
+        },
+        "205": {
+            "NAME": "United Kingdom"
+        },
+        "206": {
+            "NAME": "Ukraine"
+        },
+        "207": {
+            "NAME": "United States"
+        },
+        "208": {
+            "NAME": "Burkina Faso"
+        },
+        "210": {
+            "NAME": "Uzbekistan"
+        },
+        "214": {
+            "NAME": "Viet Nam"
+        },
+        "220": {
+            "NAME": "Yemen"
+        },
+        "223": {
+            "NAME": "Indonesia"
+        },
+        "226": {
+            "NAME": "United Arab Emirates"
+        },
+        "229": {
+            "NAME": "Palau"
+        },
+        "230": {
+            "NAME": "Marshall Islands"
+        },
+        "236": {
+            "NAME": "Serbia"
+        },
+        "238": {
+            "NAME": "Svalbard"
+        },
+        "244": {
+            "NAME": "Taiwan"
+        },
+        "245": {
+            "NAME": "Russia"
+        }
+    }
+}
