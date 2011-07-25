@@ -27,6 +27,37 @@ exports['getInfo()'] = function(beforeExit) {
     })
 };
 
+exports['getInfo() with XML string'] = function(beforeExit) {
+    var xml = fs.readFileSync('./test/data/world.xml', 'utf8');
+
+    var completed = false;
+    new mapnik({
+        protocol: 'mapnik:',
+        pathname: './test/data/world.xml',
+        search: '?' + Date.now(), // prevents caching
+        xml: xml
+    }, function(err, source) {
+        if (err) throw err;
+
+        source.getInfo(function(err, info) {
+            completed = true;
+            if (err) throw err;
+            assert.deepEqual(info, {
+                name: 'world',
+                id: 'world',
+                minzoom: 0,
+                maxzoom: 22,
+                center: [ 0, 4.317819745709997, 2 ],
+                bounds: [ -180, -79.11799791776475, 180, 87.75363740918475 ]
+            });
+        });
+    });
+
+    beforeExit(function() {
+        assert.ok(completed);
+    })
+};
+
 exports['getInfo() with formatter'] = function(beforeExit) {
     var completed = false;
     new mapnik('mapnik://./test/data/test.xml', function(err, source) {

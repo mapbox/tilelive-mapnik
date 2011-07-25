@@ -58,6 +58,38 @@ exports['getTile()'] = function(beforeExit) {
 };
 
 
+exports['getTile() with XML string'] = function(beforeExit) {
+    var xml = fs.readFileSync('./test/data/world.xml', 'utf8');
+
+    var completion = {};
+    new mapnik({
+        protocol: 'mapnik:',
+        pathname: './test/data/world.xml',
+        search: '?' + Date.now(), // prevents caching
+        xml: xml
+    }, function(err, source) {
+        if (err) throw err;
+
+        tileCoords.forEach(function(coords) {
+            source.getTile(coords[0], coords[1], coords[2], function(err, tile, headers) {
+                if (err) throw err;
+                var key = coords[0] + '_' + coords[1] + '_' + coords[2];
+                assert.imageEqualsFile(tile, 'test/fixture/tiles/transparent_' + key + '.png', function(err, similarity) {
+                    completion['tile_' + key] = true;
+                    if (err) throw err;
+                    assert.deepEqual(headers, {
+                        "Content-Type": "image/png"
+                    });
+                });
+            });
+        });
+    });
+
+    beforeExit(function() {
+        assert.deepEqual(completion, tileCoordsCompletion);
+    });
+};
+
 exports['getTile() with invalid style'] = function(beforeExit) {
     var completion = false;
     new mapnik('mapnik://./test/data/invalid_style.xml', function(err, source) {
