@@ -1,6 +1,9 @@
 # tilelive-mapnik
 
-Renderer backend for [tilelive.js][1] that uses [node-mapnik][2] to render tiles and grids from a Mapnik XML file. `tilelive-mapnik` implements the [Tilesource API](https://github.com/mapbox/tilelive.js/blob/master/API.md).
+Renderer backend for [tilelive.js](http://github.com/mapbox/tilelive.js) that
+uses [node-mapnik](http://github.com/mapnik/node-mapnik) to render tiles and
+grids from a Mapnik XML file. `tilelive-mapnik` implements the
+[Tilesource API](https://github.com/mapbox/tilelive.js/blob/master/API.md).
 
 
 ## Installation
@@ -30,4 +33,28 @@ tilelive.load('mapnik:///path/to/file.xml', function(err, source) {
 });
 ```
 
-Note that grid generation will only work when there's a .mml file with the same basename as the XML file in that directory that contains information about how interactivity should be rendered.
+Note that grid generation will only work when there's a `.mml` file with the
+same basename as the XML file in that directory that contains information
+about how interactivity should be rendered.
+
+Alternatively you may pass data to `tilelive-mapnik` directly using an XML
+string and MML object.
+
+```javascript
+var uri = {
+    protocol: 'mapnik:',
+    slashes: true,
+    xml: '<?xml version="1.0" encoding="utf-8"?>\n<Map srs="+proj=merc ... ',
+    mml: {
+        interactivity: {
+            layer: 'world',
+            fields: ['NAME']
+        },
+        format: 'png'
+    }
+};
+tilelive.load(uri, function(err, source) {
+    // ...
+});
+```
+
