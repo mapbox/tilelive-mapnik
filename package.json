@@ -26,9 +26,7 @@
         "zlib"        : "1.0.x",
         "generic-pool": "1.0.x",
         "mapnik"      : "0.4.x",
-        "sphericalmercator": "1.0.0",
-        "srs"         : "0.1.x",
-        "zipfile"     : "0.1.x"
+        "sphericalmercator": "1.0.0"
     },
     "devDependencies": {
         "expresso": "0.7.x"

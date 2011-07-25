@@ -5,7 +5,7 @@ var mapnik = require('..');
 
 exports['getInfo()'] = function(beforeExit) {
     var completed = false;
-    new mapnik('mapnik://./test/data/world.mml', function(err, source) {
+    new mapnik('mapnik://./test/data/world.xml', function(err, source) {
         if (err) throw err;
 
         source.getInfo(function(err, info) {
@@ -29,7 +29,7 @@ exports['getInfo()'] = function(beforeExit) {
 
 exports['getInfo() with formatter'] = function(beforeExit) {
     var completed = false;
-    new mapnik('mapnik://./test/data/test.mml', function(err, source) {
+    new mapnik('mapnik://./test/data/test.xml', function(err, source) {
         if (err) throw err;
 
         source.getInfo(function(err, info) {
@@ -42,7 +42,8 @@ exports['getInfo() with formatter'] = function(beforeExit) {
                 maxzoom: 22,
                 center: [ 1.054687500000007, 29.53522956294847, 2 ],
                 bounds: [ -180, -79.11799791776475, 180, 87.75363740918475 ],
-                formatter: "function(options, data) { switch (options.format) { case 'full': return '' + data[\"NAME\"] + ''; break; case 'location': return ''; break; case 'teaser': default: return '' + data[\"NAME\"] + ''; break; } }"
+                // @TODO: move this back to tilelive-mapnik?
+                // formatter: "function(options, data) { switch (options.format) { case 'full': return '' + data[\"NAME\"] + ''; break; case 'location': return ''; break; case 'teaser': default: return '' + data[\"NAME\"] + ''; break; } }"
             });
         });
     });
