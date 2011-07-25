@@ -102,3 +102,29 @@ exports['getTile() with invalid style'] = function(beforeExit) {
         assert.ok(completion);
     })
 };
+
+exports['getTile() with missing style'] = function(beforeExit) {
+    var completion = false;
+    new mapnik('mapnik://./test/data/missing.xml', function(err, source) {
+        completion = true;
+        assert.ok(err);
+        assert.equal(err.code, "ENOENT");
+    });
+
+    beforeExit(function() {
+        assert.ok(completion);
+    })
+};
+
+exports['getTile() with bad style'] = function(beforeExit) {
+    var completion = false;
+    new mapnik('mapnik://./test/data/world_bad.xml', function(err, source) {
+        completion = true;
+        assert.ok(err);
+        assert.ok(err.message.search('Unknown child node in \'Style\'.') === 0);
+    });
+
+    beforeExit(function() {
+        assert.ok(completion);
+    })
+};
