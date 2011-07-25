@@ -19,7 +19,7 @@
         "Young Hahn <yhahn>"
     ],
     "dependencies": {
-        "carto"       : "0.1.x",
+        "carto"       : "https://github.com/mapbox/carto/tarball/aea887200852226acf25a01937c2ae414e253f32",
         "get"         : "~0.4.2",
         "step"        : "0.0.x",
         "underscore"  : "1.1.x",
