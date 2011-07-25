@@ -66,32 +66,108 @@
         "!!!!!888888!!!8788888!8888!8!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:!!!!"
     ],
     "keys": [
-        "RU",
+        "245",
         "",
-        "CN",
-        "US",
-        "MN",
-        "JP",
-        "KP",
-        "KR",
-        "IN",
-        "BT",
-        "MM",
-        "BD",
-        "TW",
-        "VN",
-        "LA",
-        "TH",
-        "MP",
-        "PH",
-        "KH",
-        "GU",
-        "FM",
-        "MH",
-        "MY",
-        "ID",
-        "PW",
-        "KI"
+        "30",
+        "207",
+        "110",
+        "89",
+        "94",
+        "96",
+        "83",
+        "32",
+        "18",
+        "14",
+        "244",
+        "214",
+        "99",
+        "193",
+        "131",
+        "172",
+        "25",
+        "73",
+        "63",
+        "230",
+        "121",
+        "223",
+        "229",
+        "95"
     ],
-    "data": {}
+    "data": {
+        "14": {
+            "NAME": "Bangladesh"
+        },
+        "18": {
+            "NAME": "Burma"
+        },
+        "25": {
+            "NAME": "Cambodia"
+        },
+        "30": {
+            "NAME": "China"
+        },
+        "32": {
+            "NAME": "Bhutan"
+        },
+        "63": {
+            "NAME": "Micronesia, Federated States of"
+        },
+        "73": {
+            "NAME": "Guam"
+        },
+        "83": {
+            "NAME": "India"
+        },
+        "89": {
+            "NAME": "Japan"
+        },
+        "94": {
+            "NAME": "Korea, Democratic People's Republic of"
+        },
+        "95": {
+            "NAME": "Kiribati"
+        },
+        "96": {
+            "NAME": "Korea, Republic of"
+        },
+        "99": {
+            "NAME": "Lao People's Democratic Republic"
+        },
+        "110": {
+            "NAME": "Mongolia"
+        },
+        "121": {
+            "NAME": "Malaysia"
+        },
+        "131": {
+            "NAME": "Northern Mariana Islands"
+        },
+        "172": {
+            "NAME": "Philippines"
+        },
+        "193": {
+            "NAME": "Thailand"
+        },
+        "207": {
+            "NAME": "United States"
+        },
+        "214": {
+            "NAME": "Viet Nam"
+        },
+        "223": {
+            "NAME": "Indonesia"
+        },
+        "229": {
+            "NAME": "Palau"
+        },
+        "230": {
+            "NAME": "Marshall Islands"
+        },
+        "244": {
+            "NAME": "Taiwan"
+        },
+        "245": {
+            "NAME": "Russia"
+        }
+    }
 }

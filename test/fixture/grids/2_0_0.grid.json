@@ -67,9 +67,19 @@
     ],
     "keys": [
         "",
-        "CA",
-        "RU",
-        "US"
+        "24",
+        "245",
+        "207"
     ],
-    "data": {}
+    "data": {
+        "24": {
+            "NAME": "Canada"
+        },
+        "207": {
+            "NAME": "United States"
+        },
+        "245": {
+            "NAME": "Russia"
+        }
+    }
 }

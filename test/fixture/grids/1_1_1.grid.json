@@ -67,39 +67,139 @@
     ],
     "keys": [
         "",
-        "GA",
-        "CD",
-        "UG",
-        "KE",
-        "SO",
-        "MV",
-        "ID",
-        "KI",
-        "CG",
-        "TZ",
-        "PG",
-        "TV",
-        "AO",
-        "ZM",
-        "TL",
-        "SB",
-        "MW",
-        "AU",
-        "MZ",
-        "MG",
-        "VU",
-        "NA",
-        "ZW",
-        "TF",
-        "FJ",
-        "BW",
-        "NC",
-        "ZA",
-        "SZ",
-        "LS",
-        "NZ",
-        "HM",
-        "BV"
+        "67",
+        "28",
+        "204",
+        "92",
+        "185",
+        "119",
+        "223",
+        "95",
+        "27",
+        "203",
+        "166",
+        "201",
+        "6",
+        "221",
+        "227",
+        "20",
+        "123",
+        "9",
+        "122",
+        "108",
+        "151",
+        "216",
+        "222",
+        "146",
+        "61",
+        "180",
+        "124",
+        "178",
+        "219",
+        "179",
+        "159",
+        "147",
+        "145"
     ],
-    "data": {}
+    "data": {
+        "6": {
+            "NAME": "Angola"
+        },
+        "9": {
+            "NAME": "Australia"
+        },
+        "20": {
+            "NAME": "Solomon Islands"
+        },
+        "27": {
+            "NAME": "Congo"
+        },
+        "28": {
+            "NAME": "Democratic Republic of the Congo"
+        },
+        "61": {
+            "NAME": "Fiji"
+        },
+        "67": {
+            "NAME": "Gabon"
+        },
+        "92": {
+            "NAME": "Kenya"
+        },
+        "95": {
+            "NAME": "Kiribati"
+        },
+        "108": {
+            "NAME": "Madagascar"
+        },
+        "119": {
+            "NAME": "Maldives"
+        },
+        "122": {
+            "NAME": "Mozambique"
+        },
+        "123": {
+            "NAME": "Malawi"
+        },
+        "124": {
+            "NAME": "New Caledonia"
+        },
+        "145": {
+            "NAME": "Bouvet Island"
+        },
+        "146": {
+            "NAME": "French Southern and Antarctic Lands"
+        },
+        "147": {
+            "NAME": "Heard Island and McDonald Islands"
+        },
+        "151": {
+            "NAME": "Vanuatu"
+        },
+        "159": {
+            "NAME": "New Zealand"
+        },
+        "166": {
+            "NAME": "Papua New Guinea"
+        },
+        "178": {
+            "NAME": "South Africa"
+        },
+        "179": {
+            "NAME": "Lesotho"
+        },
+        "180": {
+            "NAME": "Botswana"
+        },
+        "185": {
+            "NAME": "Somalia"
+        },
+        "201": {
+            "NAME": "Tuvalu"
+        },
+        "203": {
+            "NAME": "United Republic of Tanzania"
+        },
+        "204": {
+            "NAME": "Uganda"
+        },
+        "216": {
+            "NAME": "Namibia"
+        },
+        "219": {
+            "NAME": "Swaziland"
+        },
+        "221": {
+            "NAME": "Zambia"
+        },
+        "222": {
+            "NAME": "Zimbabwe"
+        },
+        "223": {
+            "NAME": "Indonesia"
+        },
+        "227": {
+            "NAME": "Timor-Leste"
+        }
+    }
 }

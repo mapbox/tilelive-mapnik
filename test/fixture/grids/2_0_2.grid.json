@@ -67,19 +67,59 @@
     ],
     "keys": [
         "",
-        "UM",
-        "EC",
-        "KI",
-        "TK",
-        "PF",
-        "CK",
-        "WF",
-        "WS",
-        "AS",
-        "TO",
-        "FJ",
-        "PN",
-        "CL"
+        "150",
+        "49",
+        "95",
+        "195",
+        "64",
+        "43",
+        "217",
+        "218",
+        "7",
+        "196",
+        "61",
+        "228",
+        "33"
     ],
-    "data": {}
+    "data": {
+        "7": {
+            "NAME": "American Samoa"
+        },
+        "33": {
+            "NAME": "Chile"
+        },
+        "43": {
+            "NAME": "Cook Islands"
+        },
+        "49": {
+            "NAME": "Ecuador"
+        },
+        "61": {
+            "NAME": "Fiji"
+        },
+        "64": {
+            "NAME": "French Polynesia"
+        },
+        "95": {
+            "NAME": "Kiribati"
+        },
+        "150": {
+            "NAME": "United States Minor Outlying Islands"
+        },
+        "195": {
+            "NAME": "Tokelau"
+        },
+        "196": {
+            "NAME": "Tonga"
+        },
+        "217": {
+            "NAME": "Wallis and Futuna Islands"
+        },
+        "218": {
+            "NAME": "Samoa"
+        },
+        "228": {
+            "NAME": "Pitcairn Islands"
+        }
+    }
 }

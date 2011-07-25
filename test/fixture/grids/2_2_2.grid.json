@@ -67,33 +67,115 @@
     ],
     "keys": [
         "",
-        "GA",
-        "CG",
-        "CD",
-        "UG",
-        "KE",
-        "SO",
-        "MV",
-        "GQ",
-        "TZ",
-        "RW",
-        "SC",
-        "IO",
-        "AO",
-        "ZM",
-        "MW",
-        "MU",
-        "MZ",
-        "YT",
-        "MG",
-        "NA",
-        "ZW",
-        "TF",
-        "BW",
-        "RE",
-        "ZA",
-        "SZ",
-        "LS"
+        "67",
+        "27",
+        "28",
+        "204",
+        "92",
+        "185",
+        "119",
+        "52",
+        "203",
+        "174",
+        "177",
+        "148",
+        "6",
+        "221",
+        "123",
+        "115",
+        "122",
+        "141",
+        "108",
+        "216",
+        "222",
+        "146",
+        "180",
+        "169",
+        "178",
+        "219",
+        "179"
     ],
-    "data": {}
+    "data": {
+        "6": {
+            "NAME": "Angola"
+        },
+        "27": {
+            "NAME": "Congo"
+        },
+        "28": {
+            "NAME": "Democratic Republic of the Congo"
+        },
+        "52": {
+            "NAME": "Equatorial Guinea"
+        },
+        "67": {
+            "NAME": "Gabon"
+        },
+        "92": {
+            "NAME": "Kenya"
+        },
+        "108": {
+            "NAME": "Madagascar"
+        },
+        "115": {
+            "NAME": "Mauritius"
+        },
+        "119": {
+            "NAME": "Maldives"
+        },
+        "122": {
+            "NAME": "Mozambique"
+        },
+        "123": {
+            "NAME": "Malawi"
+        },
+        "141": {
+            "NAME": "Mayotte"
+        },
+        "146": {
+            "NAME": "French Southern and Antarctic Lands"
+        },
+        "148": {
+            "NAME": "British Indian Ocean Territory"
+        },
+        "169": {
+            "NAME": "Reunion"
+        },
+        "174": {
+            "NAME": "Rwanda"
+        },
+        "177": {
+            "NAME": "Seychelles"
+        },
+        "178": {
+            "NAME": "South Africa"
+        },
+        "179": {
+            "NAME": "Lesotho"
+        },
+        "180": {
+            "NAME": "Botswana"
+        },
+        "185": {
+            "NAME": "Somalia"
+        },
+        "203": {
+            "NAME": "United Republic of Tanzania"
+        },
+        "204": {
+            "NAME": "Uganda"
+        },
+        "216": {
+            "NAME": "Namibia"
+        },
+        "219": {
+            "NAME": "Swaziland"
+        },
+        "221": {
+            "NAME": "Zambia"
+        },
+        "222": {
+            "NAME": "Zimbabwe"
+        }
+    }
 }

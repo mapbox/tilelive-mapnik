@@ -67,9 +67,19 @@
     ],
     "keys": [
         "",
-        "GL",
-        "CA",
-        "SJ"
+        "71",
+        "24",
+        "238"
     ],
-    "data": {}
+    "data": {
+        "24": {
+            "NAME": "Canada"
+        },
+        "71": {
+            "NAME": "Greenland"
+        },
+        "238": {
+            "NAME": "Svalbard"
+        }
+    }
 }
