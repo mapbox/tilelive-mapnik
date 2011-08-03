@@ -18,6 +18,9 @@ API.
 ## Usage
 
 ```javascript
+var tilelive = require('tilelive');
+require('tilelive-mapnik').registerProtocols(tilelive);
+
 tilelive.load('mapnik:///path/to/file.xml', function(err, source) {
     if (err) throw err;
 
