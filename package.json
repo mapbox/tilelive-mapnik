@@ -23,7 +23,7 @@
         "underscore"  : "1.1.x",
         "generic-pool": "~1.0.8",
         "mapnik"      : "~0.6.0",
-        "eio"         : "0.0.x",
+        "eio"         : "https://github.com/developmentseed/node-eio/tarball/master",
         "sphericalmercator": "1.0.0"
     },
     "devDependencies": {
