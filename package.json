@@ -21,13 +21,13 @@
     "dependencies": {
         "step"        : "0.0.x",
         "underscore"  : "1.1.x",
-        "generic-pool": "1.0.x",
-        "mapnik"      : "0.5.x",
+        "generic-pool": "~1.0.8",
+        "mapnik"      : "~0.6.0",
         "eio"         : "0.0.x",
         "sphericalmercator": "1.0.0"
     },
     "devDependencies": {
-        "expresso": "0.7.x"
+        "expresso": "~0.9.0"
     },
     "engines": {
         "node": "0.4.x"
