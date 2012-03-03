@@ -1,5 +1,5 @@
 {
-    "name"          : "tilelive-mapnik",
+    "name"          : "tilelive-mapnik-cartodb",
     "version"       : "0.2.1",
     "main"          : "./lib/mapnik.js",
     "description"   : "Mapnik backend for tilelive",
@@ -22,8 +22,8 @@
         "step"        : "0.0.x",
         "underscore"  : "1.1.x",
         "generic-pool": "1.0.x",
-        "mapnik"      : "0.5.x",
-        "eio"         : "0.0.x",
+        "mapnik"      : "0.5.5",
+        "eio"         : "0.0.1",
         "sphericalmercator": "1.0.0"
     },
     "devDependencies": {
