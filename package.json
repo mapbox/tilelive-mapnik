@@ -22,7 +22,7 @@
         "step"        : "0.0.x",
         "underscore"  : "1.1.x",
         "generic-pool": "1.0.x",
-        "mapnik": "https://github.com/mapnik/node-mapnik/tarball/0ace3a336a239c3e82e5fb052d6142207574692d",
+        "mapnik": "https://github.com/mapnik/node-mapnik/tarball/eeacb0d813c49d01820623bbc84a074883c41a4f",
         "eio"         : "0.0.x",
         "sphericalmercator": "1.0.0"
     },
