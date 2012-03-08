@@ -42,7 +42,6 @@ exports['getInfo() with XML string'] = function(beforeExit) {
         source.getInfo(function(err, info) {
             completed = true;
             if (err) throw err;
-            console.warn(info);
             assert.deepEqual(info, {
                 name: 'world',
                 id: 'world',
