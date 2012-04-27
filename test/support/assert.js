@@ -7,8 +7,9 @@ var assert = module.exports = exports = require('assert');
 assert.imageEqualsFile = function(buffer, file_b, callback) {
     if (!callback) callback = function(err) { if (err) throw err; };
     file_b = path.resolve(file_b);
-    var file_a = '/tmp/' + (Math.random() * 1e16);
+    var file_a = '/tmp/' + (Math.random() * 1e16 + path.extname(file_b));
     var err = fs.writeFileSync(file_a, buffer);
+    var err = fs.writeFileSync(file_b, buffer);
     if (err) throw err;
 
     exec('compare -metric PSNR "' + file_a + '" "' +

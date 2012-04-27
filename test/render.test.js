@@ -95,7 +95,7 @@ exports['getTile() with invalid style'] = function(beforeExit) {
     new mapnik('mapnik://./test/data/invalid_style.xml', function(err, source) {
         completion = true;
         assert.ok(err);
-        assert.equal(err.message, "XML document not well formed: \nStart tag expected, '<' not found\n");
+        assert.ok(err.message.search('XML document not') !== -1);
     });
 
     beforeExit(function() {
@@ -121,7 +121,7 @@ exports['getTile() with bad style'] = function(beforeExit) {
     new mapnik('mapnik://./test/data/world_bad.xml', function(err, source) {
         completion = true;
         assert.ok(err);
-        assert.ok(err.message.search('Unknown child node in \'Style\'.') === 0);
+        assert.ok(err.message.search('The following nodes or attributes were not processed') != -1);
     });
 
     beforeExit(function() {
