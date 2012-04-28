@@ -1,11 +1,11 @@
 var fs = require('fs');
 var assert = require('assert');
-var mapnik = require('..');
+var mapnik_backend = require('..');
 
 
 exports['getGrid()'] = function(beforeExit) {
     var completion = {};
-    new mapnik('mapnik://./test/data/test.xml', function(err, source) {
+    new mapnik_backend('mapnik://./test/data/test.xml', function(err, source) {
         if (err) throw err;
 
         [   [0, 0, 0],
@@ -71,7 +71,7 @@ exports['getGrid()'] = function(beforeExit) {
 
 exports['getGrid() with invalid layer'] = function(beforeExit) {
     var completed = false;
-    new mapnik('mapnik://./test/data/invalid_interactivity_1.xml', function(err, source) {
+    new mapnik_backend('mapnik://./test/data/invalid_interactivity_1.xml', function(err, source) {
         if (err) throw err;
 
         source.getGrid(0, 0, 0, function(err, info, headers) {

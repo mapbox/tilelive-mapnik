@@ -1,6 +1,6 @@
 var fs = require('fs');
 var assert = require('./support/assert');
-var mapnik = require('..');
+var mapnik_backend = require('..');
 
 var tileCoords = [
     [0, 0, 0],
@@ -34,7 +34,7 @@ tileCoords.forEach(function(coords) {
 
 exports['getTile()'] = function(beforeExit) {
     var completion = {};
-    new mapnik('mapnik://./test/data/world.xml', function(err, source) {
+    new mapnik_backend('mapnik://./test/data/world.xml', function(err, source) {
         if (err) throw err;
 
         tileCoords.forEach(function(coords) {
@@ -62,7 +62,7 @@ exports['getTile() with XML string'] = function(beforeExit) {
     var xml = fs.readFileSync('./test/data/world.xml', 'utf8');
 
     var completion = {};
-    new mapnik({
+    new mapnik_backend({
         protocol: 'mapnik:',
         pathname: './test/data/world.xml',
         search: '?' + Date.now(), // prevents caching
@@ -92,7 +92,7 @@ exports['getTile() with XML string'] = function(beforeExit) {
 
 exports['getTile() with invalid style'] = function(beforeExit) {
     var completion = false;
-    new mapnik('mapnik://./test/data/invalid_style.xml', function(err, source) {
+    new mapnik_backend('mapnik://./test/data/invalid_style.xml', function(err, source) {
         completion = true;
         assert.ok(err);
         assert.ok(err.message.search('XML document not') !== -1);
@@ -105,7 +105,7 @@ exports['getTile() with invalid style'] = function(beforeExit) {
 
 exports['getTile() with missing style'] = function(beforeExit) {
     var completion = false;
-    new mapnik('mapnik://./test/data/missing.xml', function(err, source) {
+    new mapnik_backend('mapnik://./test/data/missing.xml', function(err, source) {
         completion = true;
         assert.ok(err);
         assert.equal(err.code, "ENOENT");
@@ -118,7 +118,7 @@ exports['getTile() with missing style'] = function(beforeExit) {
 
 exports['getTile() with bad style'] = function(beforeExit) {
     var completion = false;
-    new mapnik('mapnik://./test/data/world_bad.xml', function(err, source) {
+    new mapnik_backend('mapnik://./test/data/world_bad.xml', function(err, source) {
         completion = true;
         assert.ok(err);
         assert.ok(err.message.search('The following nodes or attributes were not processed') != -1);

@@ -1,11 +1,11 @@
 var fs = require('fs');
 var assert = require('assert');
-var mapnik = require('..');
+var mapnik_backend = require('..');
 
 
 exports['getInfo()'] = function(beforeExit) {
     var completed = false;
-    new mapnik('mapnik://./test/data/world.xml', function(err, source) {
+    new mapnik_backend('mapnik://./test/data/world.xml', function(err, source) {
         if (err) throw err;
 
         source.getInfo(function(err, info) {
@@ -35,7 +35,7 @@ exports['getInfo() with XML string'] = function(beforeExit) {
     var xml = fs.readFileSync('./test/data/world.xml', 'utf8');
 
     var completed = false;
-    new mapnik({
+    new mapnik_backend({
         protocol: 'mapnik:',
         pathname: './test/data/world.xml',
         search: '?' + Date.now(), // prevents caching
@@ -68,7 +68,7 @@ exports['getInfo() with XML string'] = function(beforeExit) {
 
 exports['getInfo() with formatter'] = function(beforeExit) {
     var completed = false;
-    new mapnik('mapnik://./test/data/test.xml', function(err, source) {
+    new mapnik_backend('mapnik://./test/data/test.xml', function(err, source) {
         if (err) throw err;
 
         source.getInfo(function(err, info) {
