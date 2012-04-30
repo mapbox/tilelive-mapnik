@@ -79,7 +79,7 @@ exports['getInfo() with formatter'] = function(beforeExit) {
                 id: 'test',
                 minzoom: 0,
                 maxzoom: 22,
-                center: [ 1.054687500000007, 29.53522956294847, 2 ]
+                center: [ 0, 0, 2 ]
             };
             assert.equal(info.name,expected.name);
             assert.equal(info.id,expected.id);
