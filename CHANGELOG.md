@@ -1,3 +1,7 @@
+## 0.4.4
+
+* Fixed scoping typo in close()
+
 ## 0.4.3
 
 * Fixed formatting error when reporting out of bounds Tile coords
