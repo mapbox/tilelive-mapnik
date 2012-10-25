@@ -121,7 +121,7 @@ exports['getTile() with bad style'] = function(beforeExit) {
     new mapnik_backend('mapnik://./test/data/world_bad.xml', function(err, source) {
         completion = true;
         assert.ok(err);
-        assert.ok(err.message.search('The following nodes or attributes were not processed') != -1);
+        assert.ok(err.message.search('XML document not well formed') != -1);
     });
 
     beforeExit(function() {

@@ -31,10 +31,15 @@ assert.imageEqualsFile = function(buffer, file_b, callback) {
                 callback(null);
             } else {
                 var similarity = parseFloat(stderr);
-                var err = new Error('Images not equal(' + similarity + '):\n\t' +
-                        file_a  + '\n\t' + file_b + '\n\t' + diff);
-                err.similarity = similarity;
-                callback(err);
+                if (similarity < 65) {
+                    var err = new Error('Images not equal(' + similarity + '):\n\t' +
+                            file_a  + '\n\t' + file_b + '\n\t' + diff);
+                    err.similarity = similarity;
+                    callback(err);
+                } else {
+                    fs.unlinkSync(file_a);
+                    callback(null);
+                }
             }
         }
     });
