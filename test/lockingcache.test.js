@@ -26,12 +26,12 @@ exports['multiple requests get the same response'] = function(beforeExit) {
     }, 50);
 
     var resultCount = 0;
-    cache.get(1, function(err, value) {
+    cache.get('key', function(err, value) {
         assert.ok(!err);
         assert.equal(value, '=0');
         resultCount++;
     });
-    cache.get(1, function(err, value) {
+    cache.get('key', function(err, value) {
         assert.ok(!err);
         assert.equal(value, '=0');
         resultCount++;
@@ -124,19 +124,64 @@ exports['later requests get a cached response'] = function(beforeExit) {
     }, 50);
 
     var resultCount = 0;
-    cache.get(1, function(err, value) {
+    cache.get('key', function(err, value) {
         assert.ok(!err);
         assert.equal(value, '=0');
         resultCount++;
 
-        cache.get(1, function(err, value) {
+        cache.get('key', function(err, value) {
             assert.ok(!err);
             assert.equal(value, '=0');
             resultCount++;
         });
+
+        setTimeout(function() {
+            cache.get('key', function(err, value) {
+                assert.ok(!err);
+                assert.equal(value, '=0');
+                resultCount++;
+            });
+        }, 10);
     });
 
     beforeExit(function() {
-        assert.equal(resultCount, 2);
+        assert.equal(resultCount, 3);
+    });
+};
+
+exports['test cache with timeout=0'] = function(beforeExit) {
+    var n = 0;
+    var cache = new LockingCache(function generate(key) {
+        process.nextTick(function() {
+            cache.put(key, null, '=' + n++);
+        });
+        return [key];
+    }, 0);
+
+    var resultCount = 0;
+    cache.get('key', function(err, value) {
+        // (A) should get the first result
+        assert.ok(!err);
+        assert.equal(value, '=0');
+        resultCount++;
+
+        cache.get('key', function(err, value) {
+            // (C) should get the second result. The first result should be
+            // timed-out already even though we're calling it in the same tick
+            // as our cached callbacks (ie. even before B below)
+            assert.ok(!err);
+            assert.equal(value, '=1');
+            resultCount++;
+        });
+    });
+    cache.get('key', function(err, value) {
+        // (B) should get the first result, because it's queued
+        assert.ok(!err);
+        assert.equal(value, '=0');
+        resultCount++;
+    });
+
+    beforeExit(function() {
+        assert.equal(resultCount, 3);
     });
 };
