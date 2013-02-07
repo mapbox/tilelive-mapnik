@@ -1,3 +1,7 @@
+## Future
+
+* Changed map loading to be synchronous to avoid possibility of race condition in Mapnik (#58)
+
 ## 0.4.4
 
 * Fixed scoping typo in close()
