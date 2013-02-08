@@ -1,5 +1,6 @@
 ## Future
 
+* Converted tests to use mocha, instead of expresso (#35)
 * Added ability to disable internal cache of source objects by pass `uri.query.internal_cache` (#59)
 * Changed map loading to be synchronous to avoid possibility of race condition in Mapnik (#58)
 
