@@ -24,6 +24,7 @@
         "generic-pool": "~2.0.0",
         "mapnik"      : "~0.7.4",
         "eio"         : "~0.1.0",
+        "mime"        : "~1.2.9",
         "sphericalmercator": "~1.0.1"
     },
     "devDependencies": {
