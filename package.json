@@ -27,12 +27,12 @@
         "sphericalmercator": "~1.0.1"
     },
     "devDependencies": {
-        "expresso": "~0.9.0"
+        "mocha": "*"
     },
     "engines": {
         "node": ">= 0.6.13 && < 0.9.0"
     },
     "scripts": {
-        "test": "which expresso | sh"
+        "test": "make test"
     }
 }
