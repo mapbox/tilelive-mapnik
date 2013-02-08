@@ -42,6 +42,46 @@ exports['multiple requests get the same response'] = function(beforeExit) {
     });
 };
 
+exports['errors get propagated'] = function(beforeExit) {
+    var cache = new LockingCache(function generate(key) {
+        process.nextTick(function() {
+            cache.put(key, new Error('hi2u'));
+        });
+        return [key];
+    }, 50);
+
+    cache.get('key', function(err, value) {
+        assert.ok(err);
+        assert.equal(err.toString(), 'Error: hi2u');
+    });
+};
+
+exports['multiple errored requests get the same response'] = function(beforeExit) {
+    var n = 0;
+    var cache = new LockingCache(function generate(key) {
+        process.nextTick(function() {
+            cache.put(key, new Error(n++));
+        });
+        return [key];
+    }, 50);
+
+    var resultCount = 0;
+    cache.get('key', function(err, value) {
+        assert.ok(err);
+        assert.equal(err, 'Error: 0');
+        resultCount++;
+    });
+    cache.get('key', function(err, value) {
+        assert.ok(err);
+        assert.equal(err, 'Error: 0');
+        resultCount++;
+    });
+
+    beforeExit(function() {
+        assert.equal(resultCount, 2);
+    });
+};
+
 exports['derived keys get the same response'] = function(beforeExit) {
     var n = 0;
     var cache = new LockingCache(function generate(key) {
