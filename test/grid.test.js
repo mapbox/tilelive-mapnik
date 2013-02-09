@@ -56,7 +56,9 @@ describe('Render ', function() {
                     ++count;
                     if (count == array.length) {
                         assert.deepEqual(completion,tileCoordsCompletion);
-                        done();
+                        source.close(function(err) {
+                            done();
+                        });
                     }
                 });
             });
@@ -72,7 +74,9 @@ describe('Grid Render Errors ', function() {
             source.getGrid(0, 0, 0, function(err, info, headers) {
                 assert.ok(err);
                 assert.equal(err.message, "Layer name 'blah' not found");
-                done();
+                source.close(function(err) {
+                    done();
+                });
             });
         });
     });
