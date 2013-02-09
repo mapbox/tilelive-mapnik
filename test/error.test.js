@@ -48,5 +48,17 @@ describe('Handling Errors ', function() {
         });
     });
 
+    it('invalid image format', function(done) {
+        new mapnik_backend('mapnik://./test/data/test.xml', function(err, source) {
+            if (err) throw err;
+            source._info.format = 'this is an invalid image format';
+            source.getTile(0,0,0, function(err, tile, headers) {
+                assert.equal(err.message,'unknown file type: this is an invalid image format');
+                source.close(function(err) {
+                    done();
+                });
+            });
+        });
+    });
 
 });
