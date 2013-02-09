@@ -36,28 +36,9 @@ tilelive.load('mapnik:///path/to/file.xml', function(err, source) {
 });
 ```
 
-Note that grid generation will only work when there's a `.mml` file with the
-same basename as the XML file in that directory that contains information
-about how interactivity should be rendered.
+Note that grid generation will only work when there's metadata inside a
+`<Parameters>` object in the Mapnik XML.
 
-Alternatively you may pass data to `tilelive-mapnik` directly using an XML
-string and MML object.
-
-```javascript
-var uri = {
-    protocol: 'mapnik:',
-    slashes: true,
-    xml: '<?xml version="1.0" encoding="utf-8"?>\n<Map srs="+proj=merc ... ',
-    mml: {
-        interactivity: {
-            layer: 'world',
-            fields: ['NAME']
-        },
-        format: 'png'
-    }
-};
-tilelive.load(uri, function(err, source) {
-    // ...
-});
-```
-
+The key fields are `interactivity_layer` and `interactivity_fields`. See an
+[example in the tests](https://github.com/mapbox/tilelive-mapnik/blob/4e9cbf8347eba7c3c2b7e8fd4270ea39f9cc7af5/test/data/test.xml#L6-L7). These `Parameters` are normally added by the application that creates the XML,
+in this case [CartoCSS](https://github.com/mapbox/carto/blob/55fbafe0d0e8ec00515c5782a3664c15502f0437/lib/carto/renderer.js#L152-L189)
