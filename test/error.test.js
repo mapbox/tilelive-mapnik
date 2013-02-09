@@ -61,4 +61,17 @@ describe('Handling Errors ', function() {
         });
     });
 
+    it('invalid image format 2', function(done) {
+        new mapnik_backend('mapnik://./test/data/test.xml', function(err, source) {
+            if (err) throw err;
+            source._info.format = 'png8:z=20';
+            source.getTile(0,0,0, function(err, tile, headers) {
+                assert.equal(err.message,'invalid compression parameter: 20 (only -1 through 10 are valid)');
+                source.close(function(err) {
+                    done();
+                });
+            });
+        });
+    });
+
 });
