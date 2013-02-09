@@ -1,5 +1,11 @@
-## Future
+# tilelive-mapnik changelog
 
+## 0.5.0
+
+* Removed cached _xml property (#25)
+* Fixes to behavior of source.close() and handling of draining map pool
+* Improvements to setting of content-type for various output formats
+* Changed to async isSolid interface in node-mapnik, which requires at least node-mapnik@0.7.17
 * Converted tests to use mocha, instead of expresso (#35)
 * Added ability to disable internal cache of source objects by pass `uri.query.internal_cache` (#59)
 * Changed map loading to be synchronous to avoid possibility of race condition in Mapnik (#58)
