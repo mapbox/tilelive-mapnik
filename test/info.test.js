@@ -81,4 +81,15 @@ describe('Info ', function() {
         });
     });
 
+    it('getInfo() with jpeg format defined', function(done) {
+        new mapnik_backend('mapnik://./test/data/test-jpeg.xml', function(err, source) {
+            if (err) throw err;
+            source.getInfo(function(err, info) {
+                if (err) throw err;
+                assert.equal(info.format,"jpeg45");
+                done();
+            });
+        });
+    });
+
 });
