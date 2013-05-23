@@ -8,10 +8,10 @@
     "licenses"      : [{
         "type": "BSD"
     }],
-    "repositories": [{
+    "repository": {
         "type": "git",
         "url": "http://github.com/mapbox/tilelive-mapnik.git"
-    }],
+    },
     "contributors": [
         "Tom MacWright <tmcw>",
         "Will White <willwhite>",
