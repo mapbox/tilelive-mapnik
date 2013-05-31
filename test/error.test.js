@@ -66,7 +66,7 @@ describe('Handling Errors ', function() {
             if (err) throw err;
             source._info.format = 'png8:z=20';
             source.getTile(0,0,0, function(err, tile, headers) {
-                assert.equal(err.message,'invalid compression parameter: 20 (only -1 through 10 are valid)');
+                assert(err.message.match(/invalid compression parameter: 20 \(only -1 through (9|10) are valid\)/), 'error message mismatch: ' + err.message);
                 source.close(function(err) {
                     done();
                 });
