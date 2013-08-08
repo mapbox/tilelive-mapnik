@@ -1,5 +1,9 @@
 # tilelive-mapnik changelog
 
+## 0.6.0
+
+* Upgraded to node-mapnik-1.1.2 (#68)
+
 ## 0.5.0
 
 * Removed cached _xml property (#25)
