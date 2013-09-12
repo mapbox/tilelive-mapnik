@@ -1,5 +1,10 @@
 # tilelive-mapnik changelog
 
+## 0.6.1
+
+* Fixed package.json `engines` declaration
+* Upgraded to node-mapnik 1.2.0
+
 ## 0.6.0
 
 * Upgraded to node-mapnik-1.1.2 (#68)
