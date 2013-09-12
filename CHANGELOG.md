@@ -3,6 +3,9 @@
 ## 0.6.0
 
 * Upgraded to node-mapnik-1.1.2 (#68)
+* Moved cache of solid tiles to tilesource (rather than global) #64
+* Ensured `scale` value passed to Mapnik is a number
+* Exposed mapnik binding as MapnikSource.mapnik
 
 ## 0.5.0
 
