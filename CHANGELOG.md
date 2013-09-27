@@ -1,5 +1,9 @@
 # tilelive-mapnik changelog
 
+## 0.6.2
+
+* Ensure correct detection of mime type for new mapnik image formats that separate name from options using `:`.
+
 ## 0.6.1
 
 * Fixed package.json `engines` declaration
