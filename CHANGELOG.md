@@ -1,5 +1,10 @@
 # tilelive-mapnik changelog
 
+## 0.6.3
+
+* key solidCache on image format (#51)
+* Fix tests to work with Mapnik 2.3.x (https://github.com/mapnik/mapnik/issues/2028)
+
 ## 0.6.2
 
 * Ensure correct detection of mime type for new mapnik image formats that separate name from options using `:`.
