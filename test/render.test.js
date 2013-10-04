@@ -66,6 +66,7 @@ describe('Render ', function() {
         it('validates', function(done) {
             var count = 0;
             tileCoords.forEach(function(coords,idx,array) {
+                source._info.format = 'png32';
                 source.getTile(coords[0], coords[1], coords[2],
                    function(err, tile, headers) {
                       if (err) throw err;
@@ -107,6 +108,7 @@ describe('Render ', function() {
         it('validates', function(done) {
             var count = 0;
             tileCoords.forEach(function(coords,idx,array) {
+                source._info.format = 'png32';
                 source.getTile(coords[0], coords[1], coords[2],
                    function(err, tile, headers) {
                       if (err) throw err;
