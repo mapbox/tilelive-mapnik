@@ -20,6 +20,33 @@ describe('Handling Errors ', function() {
         });
     });
 
+    // See https://github.com/mapbox/tilelive-mapnik/pull/74
+    it('invalid font, strict', function(done) {
+        new mapnik_backend({pathname:'./test/data/invalid_font_face.xml', strict:true}, function(err, source) {
+            try {
+              assert.ok(err);
+              assert.ok(err.message.search("font face") !== -1, err.message);
+              if (source) {
+                  source.close(function(err) {
+                      done();
+                  });
+              } else {
+                  done();
+              }
+            } catch (err) { done(err); }
+        });
+    });
+
+    // See https://github.com/mapbox/tilelive-mapnik/pull/74
+    it('invalid font, non-strict (default)', function(done) {
+        new mapnik_backend({pathname:'./test/data/invalid_font_face.xml'}, function(err, source) {
+            try {
+              assert.ok(!err, err);
+              done();
+            } catch (err) { done(err); }
+        });
+    });
+
     it('missing data', function(done) {
         new mapnik_backend('mapnik://./test/data/missing.xml', function(err, source) {
             assert.ok(err);
