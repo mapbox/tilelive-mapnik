@@ -1,5 +1,10 @@
 # tilelive-mapnik changelog
 
+## 0.6.4
+
+* Allow users to configure strict mode via URI (#74) (@strk)
+* Loosen mapnik requirement to bet between 0.7.25 and 1.2.x (@strk)
+
 ## 0.6.3
 
 * key solidCache on image format (#51)
