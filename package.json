@@ -34,6 +34,6 @@
         "node": ">= 0.6.13 < 0.11.0"
     },
     "scripts": {
-        "test": "mocha -R spec --timeout 5000"
+        "test": "mocha -R spec --timeout 10000"
     }
 }
