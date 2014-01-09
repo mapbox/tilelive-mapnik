@@ -1,5 +1,9 @@
 # tilelive-mapnik changelog
 
+## 0.6.5
+
+* Avoid trying to resolve undefined `uri.pathname` @dshorthouse
+
 ## 0.6.4
 
 * Allow users to configure strict mode via URI (#74) (@strk)
