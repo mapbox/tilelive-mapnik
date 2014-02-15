@@ -2,6 +2,9 @@ var fs = require('fs');
 var assert = require('assert');
 var mapnik_backend = require('..');
 
+// Register datasource plugins
+mapnik_backend.mapnik.register_default_input_plugins()
+
 describe('Info ', function() {
 
     it('getInfo()', function(done) {
