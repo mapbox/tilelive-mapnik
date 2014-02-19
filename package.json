@@ -1,7 +1,7 @@
 {
     "name"          : "tilelive-mapnik",
     "version"       : "0.6.5",
-    "main"          : "./index.js",
+    "main"          : "./lib/mapnik_backend.js",
     "description"   : "Mapnik backend for tilelive",
     "url"           : "http://github.com/mapbox/tilelive-mapnik",
     "keywords"      : ["map", "server", "mapnik", "tms"],
