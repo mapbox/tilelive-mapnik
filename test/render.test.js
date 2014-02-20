@@ -3,9 +3,6 @@ var assert = require('./support/assert');
 var mapnik_backend = require('..');
 var util = require('util');
 
-// Register datasource plugins
-mapnik_backend.mapnik.register_default_input_plugins()
-
 describe('Render ', function() {
 
     it('getTile() override format', function(done) {
