@@ -1,5 +1,9 @@
 # tilelive-mapnik changelog
 
+## 0.6.6
+
+* Added support for node-mapnik@1.3.2
+
 ## 0.6.5
 
 * Avoid trying to resolve undefined `uri.pathname` @dshorthouse
