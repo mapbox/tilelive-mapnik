@@ -1,5 +1,9 @@
 # tilelive-mapnik changelog
 
+## 0.6.7
+
+* Repair support for node-mapnik@0.7.x (broken in 0.6.6)
+
 ## 0.6.6
 
 * Added support for node-mapnik@1.3.2
