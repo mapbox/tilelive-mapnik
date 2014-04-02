@@ -1,5 +1,9 @@
 # tilelive-mapnik changelog
 
+## 0.6.9
+
+* node-eio dependency removed. If you are using node v0.8.x still and want to increase the threadpool size you'll need to do it yourself now.
+
 ## 0.6.8
 
 * Accept node-mapnik@1.4.x
