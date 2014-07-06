@@ -51,7 +51,7 @@ describe('Render ', function() {
                     if (err) throw err;
                     assert.deepEqual(info, JSON.parse(fs.readFileSync('test/fixture/grids/' + key + '.grid.json', 'utf8')));
                     assert.deepEqual(headers, {
-                        "Content-Type": "text/javascript; charset=utf-8"
+                        "Content-Type": "application/json"
                     });
                     ++count;
                     if (count == array.length) {
