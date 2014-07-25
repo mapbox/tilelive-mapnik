@@ -1,5 +1,12 @@
 # tilelive-mapnik changelog
 
+## 0.6.10
+
+* Started auto-registering fonts (now that node-mapnik does not) which can be disabled with `?autoLoadFonts=false` (@vsivsi)
+* Correct UTF grid content type (@mojodna)
+* Add ?poolSize, falling back to UV_THREADPOOL_SIZE further falling back to the number of cores reported. (@mojodna)
+* Report autoscale: true (@mojodna)
+
 ## 0.6.9
 
 * node-eio dependency removed. If you are using node v0.8.x still and want to increase the threadpool size you'll need to do it yourself now.
