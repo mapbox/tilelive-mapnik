@@ -10,7 +10,7 @@
     </Parameters>
     <Style name="world">
         <Rule>
-            <TextSymbolizer face-name="bogus" />
+            <TextSymbolizer face-name="bogus" clip="true"/>
         </Rule>
     </Style>
     
