@@ -1,5 +1,9 @@
 # tilelive-mapnik changelog
 
+## 0.6.11
+
+* Support for node-mapnik >= 1.4.12
+
 ## 0.6.10
 
 * Started auto-registering fonts (now that node-mapnik does not) which can be disabled with `?autoLoadFonts=false` (@vsivsi)
