@@ -9,8 +9,8 @@
     </Parameters>
     <Style name="world">
         <Rule>
-            <PolygonSymbolizer fill="#eeeeee" />
-            <LineSymbolizer stroke="#cccccc" stroke-width="0.5" />
+            <PolygonSymbolizer fill="#eeeeee" clip="true" />
+            <LineSymbolizer stroke="#cccccc" stroke-width="0.5" clip="true" />
         </Rule>
     </Style>
     

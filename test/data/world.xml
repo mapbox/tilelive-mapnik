@@ -7,7 +7,7 @@
     </Parameters>
     <Style name="world">
         <Rule>
-            <LineSymbolizer stroke="#000000" stroke-width="1" />
+            <LineSymbolizer stroke="#000000" stroke-width="1" clip="true" />
         </Rule>
     </Style>
     
