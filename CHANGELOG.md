@@ -1,5 +1,9 @@
 # tilelive-mapnik changelog
 
+## vNext
+
+* Improved cache key generation
+
 ## 0.6.11
 
 * Support for node-mapnik >= 1.4.12
