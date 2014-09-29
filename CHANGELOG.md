@@ -1,6 +1,6 @@
 # tilelive-mapnik changelog
 
-## vNext
+## 0.6.12
 
 * Improved cache key generation
 
