@@ -1,5 +1,9 @@
 # tilelive-mapnik changelog
 
+## 0.6.13
+
+* Support for node-mapnik@3.x
+
 ## 0.6.12
 
 * Improved cache key generation
