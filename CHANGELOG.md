@@ -1,5 +1,10 @@
 # tilelive-mapnik changelog
 
+## 0.6.15
+
+* Support for Node v0.12.x
+* Fixed handling of boolean options
+
 ## 0.6.14
 
 * Support for Node v0.11.x
