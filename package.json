@@ -1,6 +1,6 @@
 {
     "name"          : "tilelive-mapnik",
-    "version"       : "0.6.15",
+    "version"       : "0.6.16",
     "main"          : "./lib/mapnik_backend.js",
     "description"   : "Mapnik backend for tilelive",
     "url"           : "http://github.com/mapbox/tilelive-mapnik",
@@ -16,7 +16,8 @@
         "Tom MacWright <tmcw>",
         "Will White <willwhite>",
         "Dane Springmeyer <springmeyer>",
-        "Young Hahn <yhahn>"
+        "Young Hahn <yhahn>",
+        "Blake Thompson <flippmoke>"
     ],
     "dependencies": {
         "step"        : "~0.0.5",
