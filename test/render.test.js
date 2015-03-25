@@ -9,7 +9,7 @@ describe('Render ', function() {
         new mapnik_backend('mapnik://./test/data/test.xml', function(err, source) {
             if (err) throw err;
             assert.equal(source._info.format,undefined); // so will default to png in getTile
-            source._info.format = 'jpeg20';
+            source._info.format = 'jpeg:quality=20';
             source.getTile(0,0,0, function(err, tile, headers) {
                 assert.imageEqualsFile(tile, 'test/fixture/tiles/world-jpeg20.jpeg', function(err, similarity) {
                     if (err) throw err;
