@@ -22,7 +22,7 @@
     "dependencies": {
         "step"        : "~0.0.5",
         "generic-pool": "~2.1.1",
-        "mapnik":       ">=0.7.25 && <4.0.0",
+        "mapnik":       "https://github.com/mapnik/node-mapnik/tarball/5b4708baad6afefa4b8499999330e4e8def9f9c8",
         "mime"        : "~1.2.11",
         "sphericalmercator": "~1.0.2"
     },
