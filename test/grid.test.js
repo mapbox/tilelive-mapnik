@@ -52,7 +52,7 @@ describe('Render ', function() {
                     var expected = 'test/fixture/grids/' + key + '.grid.json';
                     if (!fs.existsSync(expected) || process.env.UPDATE)
                     {
-                        fs.writeFileSync(expected,JSON.stringify(info));
+                        fs.writeFileSync(expected,JSON.stringify(info, null, 4));
                     }
                     assert.deepEqual(info, JSON.parse(fs.readFileSync('test/fixture/grids/' + key + '.grid.json', 'utf8')));
                     assert.deepEqual(headers, {
