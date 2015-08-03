@@ -102,4 +102,32 @@ describe('Handling Errors ', function() {
         });
     });
 
+    ['getTile', 'getGrid'].forEach(function(method) {
+
+        it('coordinates out of range: ' + method, function(done) {
+            new mapnik_backend('mapnik://./test/data/test.xml', function(err, source) {
+                if (err) throw err;
+                source[method](0, -1, 0, function(err) {
+                    assert(err.message.match(/Coordinates out of range/), 'error message mismatch: ' + err.message);
+                    source.close(function() {
+                        done();
+                    });
+                });
+            });
+        });
+
+        it('coordinates out of range, not finite: ' + method, function(done) {
+            new mapnik_backend('mapnik://./test/data/test.xml', function(err, source) {
+                if (err) throw err;
+                source[method](1024, 0, 0, function(err) {
+                    assert(err.message.match(/Coordinates out of range/), 'error message mismatch: ' + err.message);
+                    source.close(function() {
+                        done();
+                    });
+                });
+            });
+        });
+
+    });
+
 });

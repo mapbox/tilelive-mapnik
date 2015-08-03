@@ -63,6 +63,19 @@ describe('Render ', function() {
                 });
             });
         });
+
+        it('renders for zoom>30', function(done) {
+            source.getGrid(31, 0, 0, function(err, info, headers) {
+                if (err) throw err;
+                assert.deepEqual(info, JSON.parse(fs.readFileSync('test/fixture/grids/empty.grid.json', 'utf8')));
+                assert.deepEqual(headers, {
+                    "Content-Type": "application/json"
+                });
+                source.close(function(){
+                    done();
+                });
+            });
+        });
     });
 });
 
