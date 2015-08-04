@@ -62,7 +62,7 @@ IF /I "%NPM_BIN_DIR%"=="%CD%" ECHO ERROR npm bin -g equals local directory && SE
 ECHO ===== where npm puts stuff END ============
 
 
-ECHO calling npm install && CALL npm install --loglevel=http
+ECHO calling npm install && CALL npm install --toolset=v140 --loglevel=http
 IF %ERRORLEVEL% NEQ 0 GOTO ERROR
 
 ECHO calling npm test && CALL npm test
