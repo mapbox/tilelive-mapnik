@@ -19,7 +19,7 @@
         "    ####                         !!!!!                          ",
         "    ####                            !!                          ",
         "     ## #                          !  !                         ",
-        "     ## #                    !      !!!                         ",
+        "     ## #                    !  !   !!!                         ",
         "      #  #              !         ! !!!!             !          ",
         "                     !!!         !!!!!!!!        !!   !         ",
         "                     !!      !  !!!!!!!!!       !!!!!           ",
@@ -50,12 +50,12 @@
         "CC88;;?@@DD    !!!00AAAA0000022222777777222222E!  BB            ",
         "C  ; ;;FGHHHHHHHIJ KKKAAAAAL22222222222222222EE   B             ",
         "C  ; ;;GGGHHHHHHMM KKKKAANN22222222222222222 O   BB             ",
-        "PPPQ R  GGHHHHHSSMMMMMKKTTUU2222222222222222 OOB BB             ",
-        "PPPQ         VVSSMMMMMTTTUUWW22222222222222  OBBB               ",
-        "PPPQXX XXX YZ[[SSSMMMMMTUUUWW222222222222222  B                 ",
+        "PPPQ;R  GGHHHHHSSMMMMMKKTTUU2222222222222222 OOB BB             ",
+        "PPPQQ        VVSSMMMMMTTTUUWW22222222222222  OBBB               ",
+        "PPPQXX XXX YZ[[SSSMMMMMTUUUWW222222222222222  B   B             ",
         "PPPPXXXXXYYYY[[[[]MMMMUUUUUWW^^222W222222222  B                 ",
         "PPPPXXXXXYYYY[[[[[_M`MUUUUWWWW^^WWW22222222  B    B             ",
-        "PPPPXXXXXYYYY[[[[[aaa   UUWWWWWWbWc2222222ddB                   ",
+        "PPPPXXXXXYYYY[[[[[aaa   UUWWWWWWbWc2222222ddB     B             ",
         "ePPfffgXXhhhhh[[[[[[``   WWWWWWWbWccijj22  d                    ",
         "eeffffggghhhhh [[[k[`     WWWWW  ccllj 2   m               n    ",
         "eeffffggghhhhhokkkk`      WWWW    clllj    m        p           ",
@@ -63,7 +63,7 @@
         "qurrrrgghhhhhssvvvv       WWW    W l jj    mm              ww   ",
         "xrrrryzzzhhhhsssvv        W  {   W l        mm     |||      w   ",
         "} rryzzzzzhhhsssvv        ~        l    m            |     ",
-        "    yvv         ~                             "
+        "    yvv         ~                            "
     ],
     "keys": [
         "",

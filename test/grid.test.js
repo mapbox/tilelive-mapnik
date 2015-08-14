@@ -49,6 +49,11 @@ describe('Render ', function() {
                     var key = coords[0] + '_' + coords[1] + '_' + coords[2];
                     completion['grid_' + key] = true;
                     if (err) throw err;
+                    var expected = 'test/fixture/grids/' + key + '.grid.json';
+                    if (!fs.existsSync(expected) || process.env.UPDATE)
+                    {
+                        fs.writeFileSync(expected,JSON.stringify(info, null, 4));
+                    }
                     assert.deepEqual(info, JSON.parse(fs.readFileSync('test/fixture/grids/' + key + '.grid.json', 'utf8')));
                     assert.deepEqual(headers, {
                         "Content-Type": "application/json"
