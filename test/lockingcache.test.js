@@ -187,4 +187,51 @@ describe('locking cache', function() {
             assert.equal(value, '=0');
         });
     });
+
+    it('test deleteOnHit with timeout=20', function(done) {
+        var n = 0;
+        var cache = new LockingCache(function generate(key) {
+            var extraKey = key + '_extra';
+            process.nextTick(function() {
+                cache.put(extraKey, null, '=' + n);
+                cache.put(key, null, '=' + n++);
+            });
+            return [key, extraKey];
+        }, {timeout: 20, deleteOnHit: true});
+
+        cache.get('key', function(err, value) {
+            // (A) should get the first result
+            assert.ok(!err);
+            assert.equal(value, '=0');
+
+            cache.get('key', function(err, value) {
+                // (D) should get the second result. The first result should be
+                // timed-out already even though we're calling it in the same tick
+                // as our cached callbacks (ie. even before B below)
+                assert.ok(!err);
+                assert.equal(value, '=1');
+
+                setTimeout(function() {
+                    // (E) should get a third result. This first result was consumed
+                    // already consumed in (C) and the second one was expired due timeout
+                    // so a new result will be generated
+                    cache.get('key_extra', function(err, value) {
+                        assert.ok(!err);
+                        assert.equal(value, '=2');
+                        done();
+                    });
+                }, 25);
+            });
+        });
+        cache.get('key', function(err, value) {
+            // (B) should get the first result, because it's queued
+            assert.ok(!err);
+            assert.equal(value, '=0');
+        });
+        cache.get('key_extra', function(err, value) {
+            // (C) should get the first result
+            assert.ok(!err);
+            assert.equal(value, '=0');
+        });
+    });
 });
