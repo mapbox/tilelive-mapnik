@@ -41,7 +41,10 @@ describe('Render ', function() {
                 source = s;
                 done();
             });
-        })
+        });
+        after(function(done) {
+            source.close(done);
+        });
         it('validates', function(done) {
             var count = 0;
             tileCoords.forEach(function(coords,idx,array) {
@@ -61,9 +64,7 @@ describe('Render ', function() {
                     ++count;
                     if (count == array.length) {
                         assert.deepEqual(completion,tileCoordsCompletion);
-                        source.close(function(err) {
-                            done();
-                        });
+                        done();
                     }
                 });
             });
@@ -76,9 +77,7 @@ describe('Render ', function() {
                 assert.deepEqual(headers, {
                     "Content-Type": "application/json"
                 });
-                source.close(function(){
-                    done();
-                });
+                done();
             });
         });
     });
