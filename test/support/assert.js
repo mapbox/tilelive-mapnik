@@ -8,10 +8,20 @@ var mapnik = require('mapnik');
 
 var assert = module.exports = exports = require('assert');
 
-assert.imageEqualsFile = function(buffer, file, meanError, callback) {
+assert.imageEqualsFile = function(buffer, file, meanError, format, callback) {
     if (typeof meanError == 'function') {
         callback = meanError;
         meanError = 0.05;
+        format = 'png32';
+    } else if (typeof format == 'function') {
+        callback = format;
+        format = 'png32';
+    }
+    
+    var resultImage = new mapnik.Image.fromBytesSync(buffer);
+    if (!fs.existsSync(file) || process.env.UPDATE)
+    {
+        resultImage.save(file, format);
     }
 
     var fixturesize = fs.statSync(file).size;
@@ -20,7 +30,6 @@ assert.imageEqualsFile = function(buffer, file, meanError, callback) {
         return callback(new Error('Image size is too different from fixture: ' + buffer.length + ' vs. ' + fixturesize));
     }
     var expectImage = new mapnik.Image.open(file);
-    var resultImage = new mapnik.Image.fromBytesSync(buffer);
     var pxDiff = expectImage.compare(resultImage);
 
     // Allow < 2% of pixels to vary by > default comparison threshold of 16.
