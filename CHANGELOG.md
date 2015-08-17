@@ -1,9 +1,5 @@
 # tilelive-mapnik changelog
 
-## 0.6.x
-
-* Support zoom > 30
-
 ## 0.6.15
 
 * Support for Node v0.12.x
