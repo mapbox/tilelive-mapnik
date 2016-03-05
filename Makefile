@@ -15,4 +15,10 @@ endif
 check:
 	npm test
 
+testpack:
+	rm -f ./*tgz
+	npm pack
+	tar -ztvf *tgz
+	rm -f ./*tgz
+
 .PHONY: test check
