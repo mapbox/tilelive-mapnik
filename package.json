@@ -1,35 +1,42 @@
 {
-    "name"          : "tilelive-mapnik",
-    "version"       : "0.6.18",
-    "main"          : "./lib/mapnik_backend.js",
-    "description"   : "Mapnik backend for tilelive",
-    "url"           : "http://github.com/mapbox/tilelive-mapnik",
-    "keywords"      : ["map", "server", "mapnik", "tms"],
-    "licenses"      : [{
-        "type": "BSD"
-    }],
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/mapbox/tilelive-mapnik.git"
-    },
-    "contributors": [
-        "Tom MacWright <tmcw>",
-        "Will White <willwhite>",
-        "Dane Springmeyer <springmeyer>",
-        "Young Hahn <yhahn>",
-        "Blake Thompson <flippmoke>"
-    ],
-    "dependencies": {
-        "step"        : "~0.0.5",
-        "generic-pool": "~2.4.0",
-        "mapnik":       ">=3.2.0 && <4.0.0",
-        "mime"        : "~1.3.4",
-        "sphericalmercator": "~1.0.4"
-    },
-    "devDependencies": {
-        "mocha": "*"
-    },
-    "scripts": {
-        "test": "mocha -R spec --timeout 10000"
+  "name": "@mapbox/tilelive-mapnik",
+  "version": "0.6.18",
+  "main": "./lib/mapnik_backend.js",
+  "description": "Mapnik backend for tilelive",
+  "url": "http://github.com/mapbox/tilelive-mapnik",
+  "keywords": [
+    "map",
+    "server",
+    "mapnik",
+    "tms"
+  ],
+  "licenses": [
+    {
+      "type": "BSD"
     }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mapbox/tilelive-mapnik.git"
+  },
+  "contributors": [
+    "Tom MacWright <tmcw>",
+    "Will White <willwhite>",
+    "Dane Springmeyer <springmeyer>",
+    "Young Hahn <yhahn>",
+    "Blake Thompson <flippmoke>"
+  ],
+  "dependencies": {
+    "step": "~0.0.5",
+    "generic-pool": "~2.4.0",
+    "mapnik": ">=3.2.0 && <4.0.0",
+    "mime": "~1.3.4",
+    "sphericalmercator": "~1.0.4"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha -R spec --timeout 10000"
+  }
 }
