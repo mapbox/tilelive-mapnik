@@ -47,12 +47,12 @@ describe('Render ', function() {
         [2, 3, 2],
         [2, 3, 3]
     ];
-    
+
     var tileCoordsCompletion = {};
     tileCoords.forEach(function(coords) {
         tileCoordsCompletion['tile_' + coords[0] + '_' + coords[1] + '_' + coords[2]] = true;
     });
-  
+
     describe('getTile() ', function() {
         var source;
         var completion = {};
@@ -89,7 +89,7 @@ describe('Render ', function() {
             });
         });
     });
-  
+
     describe('getTile() with XML string', function() {
         var source;
         var completion = {};
@@ -128,6 +128,56 @@ describe('Render ', function() {
                           }
                       });
                 });
+            });
+        });
+    });
+
+    describe('getTile(), solid area', function() {
+        var tileCoords = [
+            [10,844,616], // solid land
+            [10,844,617], // solid land
+            [10,844,618], // coastline
+            [10,844,619], // ocean
+            [10,844,620], // ocean
+        ];
+
+        var tileCoordsCompletion = {};
+        tileCoords.forEach(function(coords) {
+            tileCoordsCompletion['tile_' + coords[0] + '_' + coords[1] + '_' + coords[2]] = true;
+        });
+
+        var source;
+        var completion = {};
+        before(function(done) {
+            new mapnik_backend('mapnik://./test/data/test.xml?metatile=3', function(err, result) {
+                if (err) throw err;
+                source = result;
+                done();
+            });
+        })
+
+        it('validates', function(done) {
+            var count = 0;
+
+            var jobs = [];
+            tileCoords.forEach(function(coords,idx,array) {
+                source._info.format = 'png32';
+                source.getTile(coords[0], coords[1], coords[2],
+                   function(err, tile, headers) {
+                        var key = coords[0] + '_' + coords[1] + '_' + coords[2];
+                        assert.imageEqualsFile(tile, 'test/fixture/tiles/gray_' + key + '.png', function(err, similarity) {
+                            completion['tile_' + key] = true;
+                            if (err) throw err;
+                            ++count;
+                            if (count == array.length) {
+                                assert.deepEqual(completion,tileCoordsCompletion);
+                                source.close(function(err){
+                                    done();
+                                });
+                            }
+                        });
+                    }
+                );
             });
         });
     });
