@@ -1,5 +1,9 @@
 # tilelive-mapnik changelog
 
+## 0.7.0
+
+* Upgraded to mapnik@3.6.0
+
 ## 0.6.18
 
 * Upgraded to generic-pool@2.4.x
