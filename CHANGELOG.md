@@ -1,5 +1,10 @@
 # tilelive-mapnik changelog
 
+## 1.0.0
+
+* Update to mapnik@3.7.0
+* Drops support for Windows
+
 ## 0.7.0
 
 * Upgraded to mapnik@3.6.0
