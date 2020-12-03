@@ -113,7 +113,7 @@
 
 * Fixed formatting error when reporting out of bounds Tile coords
 * Properly drain pool by leveraging new `generic-pool` (#43)
-* Tests output image diff for any failing image comparisions
+* Tests output image diff for any failing image comparisons
 
 ## 0.4.2
 
