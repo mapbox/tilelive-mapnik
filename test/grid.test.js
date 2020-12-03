@@ -41,7 +41,10 @@ describe('Render ', function() {
                 source = s;
                 done();
             });
-        })
+        });
+        after(function(done) {
+            source.close(done);
+        });
         it('validates', function(done) {
             var count = 0;
             tileCoords.forEach(function(coords,idx,array) {
@@ -61,11 +64,20 @@ describe('Render ', function() {
                     ++count;
                     if (count == array.length) {
                         assert.deepEqual(completion,tileCoordsCompletion);
-                        source.close(function(err) {
-                            done();
-                        });
+                        done();
                     }
                 });
+            });
+        });
+
+        it('renders for zoom>30', function(done) {
+            source.getGrid(31, 0, 0, function(err, info, headers) {
+                if (err) throw err;
+                assert.deepEqual(info, JSON.parse(fs.readFileSync('test/fixture/grids/empty.grid.json', 'utf8')));
+                assert.deepEqual(headers, {
+                    "Content-Type": "application/json"
+                });
+                done();
             });
         });
     });
