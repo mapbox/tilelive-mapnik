@@ -5,8 +5,7 @@ uses [node-mapnik](http://github.com/mapnik/node-mapnik) to render tiles and
 grids from a Mapnik XML file. `tilelive-mapnik` implements the
 [Tilesource API](https://github.com/mapbox/tilelive.js/blob/master/API.md).
 
-[![Build Status](https://travis-ci.com/mapbox/tilelive-mapnik.svg?branch=master)](http://travis-ci.com/mapbox/tilelive-mapnik)
-[![Build status](https://ci.appveyor.com/api/projects/status/6am7la0hiaei8qop)](https://ci.appveyor.com/project/Mapbox/tilelive-mapnik)
+[![build status](https://github.com/mapbox/tilelive-mapnik/actions/workflows/build.yml/badge.svg)](https://github.com/mapbox/tilelive-mapnik/actions/workflows/build.yml)
 
 ## Installation
 
