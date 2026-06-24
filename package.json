@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/tilelive-mapnik",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./lib/mapnik_backend.js",
   "description": "Mapnik backend for tilelive",
   "url": "http://github.com/mapbox/tilelive-mapnik",
@@ -37,5 +37,8 @@
   },
   "scripts": {
     "test": "mocha -R spec --timeout 10000"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
