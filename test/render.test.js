@@ -24,6 +24,23 @@ describe('Render ', function() {
         });
     });
 
+    it('getTile() renders zoom>30', function(done) {
+        new mapnik_backend('mapnik://./test/data/test.xml', function(err, source) {
+            if (err) throw err;
+            source.getTile(31, 0, 0, function(err, tile, headers) {
+                assert.imageEqualsFile(tile, 'test/fixture/tiles/zoom-31.png', function(err) {
+                    if (err) throw err;
+                    assert.deepEqual(headers, {
+                        "Content-Type": "image/png"
+                    });
+                    source.close(function(){
+                        done();
+                    });
+                });
+            });
+        });
+    });
+
     var tileCoords = [
         [0, 0, 0],
         [1, 0, 0],
